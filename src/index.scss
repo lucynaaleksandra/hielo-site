@@ -1,0 +1,125 @@
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.la-header__wrapper {
+  height: calc(100vh - 58.89px); // for footer
+  background-image: linear-gradient(
+      rgba(12, 12, 12, 0.7),
+      rgba(12, 12, 12, 0.7)
+    ),
+    url(asset/coffee.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  // &:hover {
+  //   .side-bar {
+  //     transform: translateX(-250px);
+  //   }
+  // }
+}
+
+.la-header__section {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-size: 22px;
+}
+
+.la-header__main {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(255, 249, 241);
+}
+
+.la-header__main a {
+  text-decoration: none;
+}
+
+.la-nav__links {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: grey;
+  line-height: 1.8;
+}
+
+.la-header__logo {
+  flex-grow: 1;
+  align-items: center;
+  color: rgb(255, 249, 241);
+  background-color: rgb(41, 40, 38);
+  padding: 20px;
+}
+
+.la-header__menu {
+  padding: 20px;
+  width: 100px;
+  background: palevioletred;
+  color: rgb(255, 249, 241);
+  // transition: width 500ms;
+  &:hover {
+    .side-bar {
+      transform: translateX(-250px);
+    }
+  }
+}
+
+.side-bar {
+  position: fixed;
+  width: 250px;
+  height: 100vh;
+  left: 100vw;
+  top: 0;
+  align-items: flex-start;
+  padding: 20px;
+  list-style: none;
+  background: paleturquoise;
+  transition: 500ms;
+  // &.side-bar--visible {
+  //   transform: translateX(-250px);
+  // }
+}
+
+.la-footer__main {
+  text-align: center;
+  padding: 20px;
+  color: rgba(255, 249, 241, 0.8);
+  background-color: rgb(41, 40, 38);
+}
+
+// BANNER
+.la-banner__inner-header {
+  display: flex;
+  // text-align: center;
+  justify-content: center;
+  color: rgb(187, 139, 77);
+  font-weight: 300;
+  font-size: 17px;
+  a {
+    color: rgb(187, 139, 77);
+  }
+  p {
+    // text-align: center;
+  }
+  h2 {
+    font-size: 100px;
+    font-weight: 300;
+  }
+}
