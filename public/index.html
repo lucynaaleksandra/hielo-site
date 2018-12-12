@@ -8,11 +8,9 @@
     />
     <meta name="theme-color" content="#000000" />
 
-    <!-- <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" /> -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
     <link rel=”stylesheet” type="text/css" href=css/reset.css” />
-    <!-- <link rel=”stylesheet” type="text/scss" href=”styles/debug.scss”> -->
     <link rel="”stylesheet”" type="text/scss" href="”index.scss”" />
     <link
       rel="stylesheet"
@@ -34,37 +32,41 @@
         <header>
           <div class="la-nav__logo">
             <a href="https://templated.co/hielo" target="_blank"
-              >Hiello <span>by TEMPLATED</span></a
+              >Hielo <span>by TEMPLATED</span></a
             >
             <a href="#menu"><span class="icon-menu">&#9776;</span> MENU</a>
           </div>
 
-          <nav>
+          <nav class="la-nav--visible">
             <ul>
               <li><a href="index.html" class="la-nav__links">Home</a></li>
+              <hr />
               <li><a href="generic.html">Generic</a></li>
+              <hr />
               <li><a href="elements.html">Elements</a></li>
             </ul>
           </nav>
-          <div class="la-nav__banner">
+          <div class="la-nav__cover">
             <p>
               A free responsive website template by
               <a href="https://templated.co">TEMPLATED</a>
             </p>
             <hr />
-            <h2>Hiello</h2>
+            <h2>Hielo</h2>
           </div>
         </header>
       </section>
 
-      <!-- DUAL COLUMN -->
+      <!-- DUAL-COLUMN -->
       <section class="la-dualcolumn">
         <div>
-          <div class="la-dualcolumn__image"><img src="/asset/cg-1.jpg" /></div>
+          <div class="la-dualcolumn__image">
+            <img src="/asset/siesta-4.jpg" />
+          </div>
           <div class="la-dualcolumn__content">
             <div>
-              <h3>Maecenas feugiat</h3>
               <p>maecenas sapien feugiat ex purus</p>
+              <hr />
               <h2>Lorem ipsum dolor</h2>
             </div>
             <p>
@@ -78,11 +80,13 @@
         </div>
 
         <div>
-          <div class="la-dualcolumn__image"><img src="/asset/cg-2.jpg" /></div>
+          <div class="la-dualcolumn__image">
+            <img src="/asset/siesta-2.jpg" />
+          </div>
           <div class="la-dualcolumn__content">
             <div>
-              <h3>Nam elementum</h3>
               <p>mattis elementum sapien pretium tellus</p>
+              <hr />
               <h2>Vestibulum sit amet</h2>
             </div>
             <p>
@@ -96,6 +100,48 @@
         </div>
       </section>
 
+      <!-- BANNER -->
+      <section class="la-banner__wrapper">
+        <div class="la-banner__headings">
+          <p>
+            Nam vel ante sit amet libero scelerisque facilisis eleifend vitae
+            urna
+          </p>
+          <hr />
+          <h2>Morbi maximus justo</h2>
+        </div>
+      </section>
+
+      <!-- FOUR-GRID -->
+      <section class="la-fourgrid">
+        <div class="la-fourgrid__content">
+          <div>
+            <p>
+              Nam vel ante sit amet libero scelerisque facilisis eleifend vitae
+              urna
+            </p>
+            <hr />
+            <h2>Morbi maximus justo</h2>
+          </div>
+
+          <div class="la-fourgrid__gallery">
+            <div>
+              <a href="#"><img src="/asset/siesta-2.jpg"/></a>
+            </div>
+            <div>
+              <a href="#"><img src="/asset/siesta-3.jpg"/></a>
+            </div>
+            <div>
+              <a href="#"><img src="/asset/siesta-4.jpg"/></a>
+            </div>
+            <div>
+              <a href="#"><img src="/asset/siesta-1.jpg"/></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
       <footer>
         <ul>
           <li>

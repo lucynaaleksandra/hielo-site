@@ -36,16 +36,16 @@ li {
       rgba(12, 12, 12, 0.7),
       rgba(12, 12, 12, 0.7)
     ),
-    url(/asset/coffee.jpg);
+    url(/asset/siesta-2.jpg);
   background-size: cover;
   background-position: center;
   margin: 0;
   color: rgb(253, 243, 230);
-  &:hover {
-    .nav {
-      transform: translateX(-250px);
-    }
-  }
+  // &:hover {
+  //   .nav {
+  //     transform: translateX(-250px);
+  //   }
+  // }
 }
 
 .header {
@@ -60,20 +60,20 @@ li {
   display: flex;
   justify-content: space-between;
   background-color: rgba(41, 40, 38, 0);
+
   & a:first-child {
     flex-grow: 1;
     align-items: center;
     color: rgb(255, 255, 255);
-    // background-color: rgba(41, 40, 38, 0);
     padding: 20px;
     span {
       color: rgba(255, 255, 255, 0.5);
     }
   }
+  // menu
   & a:last-child {
     padding: 20px;
     width: 100px;
-    // background: palevioletred;
     color: rgb(255, 255, 255);
     transition: width 500ms;
     // &:hover {
@@ -95,9 +95,19 @@ nav {
   color: rgb(255, 255, 255);
   background-color: rgb(24, 24, 23);
   transition: 500ms;
-  // &.nav--visible {
-  //   transform: translateX(-250px);
-  // }
+
+  &.la-nav--visible {
+    transform: translateX(-250px);
+    li a {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 16px;
+    }
+    ul ~ hr {
+      border: 1px solid rgba(80, 80, 80, 0.4);
+      width: 80%;
+    }
+  }
+
   > ul > li > a {
     text-decoration: none;
     text-transform: uppercase;
@@ -107,7 +117,7 @@ nav {
   }
 }
 
-.la-nav__banner {
+.la-nav__cover {
   display: block;
   text-align: center;
   padding: 280px 0;
@@ -116,7 +126,7 @@ nav {
   p {
     margin-bottom: 35px;
     text-transform: uppercase;
-    word-spacing: 5px;
+    word-spacing: 3px;
     letter-spacing: 5px;
     font-size: 14px;
     opacity: 0.6;
@@ -124,17 +134,16 @@ nav {
       color: rgba(255, 255, 255, 1);
     }
   }
+  hr {
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
+    width: 25%;
+  }
   h2 {
     font-size: 100px;
     font-weight: 200;
     letter-spacing: 8px;
     margin: 0;
   }
-}
-
-hr {
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  width: 35%;
 }
 
 /* ------------- DUAL COLUMN ------------- */
@@ -145,8 +154,9 @@ hr {
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 10%;
-  padding: 10%;
+  grid-gap: 6%;
+  padding: 8%;
+  color: rgb(63, 63, 63);
 
   > div {
     text-align: center;
@@ -167,13 +177,137 @@ hr {
 
     .la-dualcolumn__content {
       padding: 20px;
-      h3 {
-        font-size: 14px;
+
+      > div {
+        p {
+          text-transform: uppercase;
+          font-size: 12px;
+          color: rgb(174, 174, 174);
+          letter-spacing: 3px;
+          word-spacing: 1px;
+        }
+        hr {
+          border: 0.5px solid rgba(153, 152, 152, 0.5);
+          width: 50%;
+        }
+        h2 {
+          font-weight: 400;
+          padding-bottom: 25px;
+        }
       }
 
       > p {
-        font-size: 15px;
+        font-size: 14px;
+        color: rgb(174, 174, 174);
+        font-weight: 300;
+        padding-bottom: 30px;
       }
+
+      button {
+        padding: 10px;
+        margin-bottom: 20px;
+        font-size: 16px;
+        text-transform: uppercase;
+        border: 2px solid lightgrey;
+        border-radius: 3px;
+        outline: none;
+
+        a {
+          color: rgb(114, 114, 114);
+        }
+      }
+    }
+  }
+}
+
+/* ------------- BANNER ------------- */
+.la-banner__wrapper {
+  background-image: linear-gradient(
+      rgba(12, 12, 12, 0.6),
+      rgba(12, 12, 12, 0.6)
+    ),
+    url("/asset/siesta-1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 20vh;
+  overflow: hidden;
+
+  .la-banner__headings {
+    display: block;
+    position: relative;
+    padding: 100px 0;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+
+    p {
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 10px;
+      opacity: 0.6;
+    }
+    hr {
+      border: 0.5px solid rgba(255, 255, 255, 0.5);
+      width: 25%;
+    }
+    h2 {
+      font-size: 25px;
+      font-weight: 200;
+      letter-spacing: 2px;
+      word-spacing: 3px;
+      margin: 0;
+    }
+  }
+}
+
+/* ------------- FOUR-GRID ------------- */
+.la-fourgrid {
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.la-fourgrid__content {
+  background-color: rgb(242, 242, 242);
+  min-height: 100vh;
+  overflow: hidden;
+  text-align: center;
+  padding-top: 40px;
+
+  > div {
+    p {
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 10px;
+      opacity: 0.6;
+    }
+    hr {
+      border: 0.5px solid rgba(153, 152, 152, 0.5);
+      width: 40%;
+    }
+    h2 {
+      font-size: 25px;
+      font-weight: 300;
+      letter-spacing: 2px;
+      word-spacing: 3px;
+      margin: 0;
+    }
+  }
+
+  .la-fourgrid__gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 8%;
+
+    background-color: rgb(242, 242, 242);
+    padding: 3% 10% 10% 10%;
+
+    div img {
+      width: 100%;
+      border: 15px solid rgb(255, 255, 255);
     }
   }
 }
@@ -186,6 +320,8 @@ footer {
   padding-bottom: 40px;
   color: rgba(255, 249, 241, 0.7);
   background-color: rgb(24, 24, 23);
+  overflow: hidden;
+
   ul {
     padding: 0;
   }
