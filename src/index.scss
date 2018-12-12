@@ -4,7 +4,8 @@ html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-size: 100%;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
   margin: 0;
   padding: 0;
 }
@@ -22,9 +23,15 @@ a {
   text-decoration: none;
 }
 
+ol,
+ul,
+li {
+  list-style: none;
+}
+
 /* ------------- NAV ------------- */
 
-.la-nav__wrapper {
+.la-nav {
   background-image: linear-gradient(
       rgba(12, 12, 12, 0.7),
       rgba(12, 12, 12, 0.7)
@@ -34,61 +41,48 @@ a {
   background-position: center;
   margin: 0;
   color: rgb(253, 243, 230);
-  // &:hover {
-  //   .nav {
-  //     transform: translateX(-250px);
-  //   }
-  // }
-}
-
-.header {
-  display: fixed;
-  flex-direction: column;
-  // height: 100vh;
-  min-height: calc(100vh – 89px);
-  font-size: 22px;
-}
-
-.la-nav__logo-wrapper {
-  display: flex;
-  justify-content: space-between;
-}
-
-.la-nav__logo {
-  flex-grow: 1;
-  align-items: center;
-  color: rgb(255, 255, 255);
-  background-color: rgb(41, 40, 38);
-  padding: 20px;
-}
-
-.la-nav__menu {
-  padding: 20px;
-  width: 100px;
-  background: palevioletred;
-  color: rgb(255, 255, 255);
-  // transition: width 500ms;
   &:hover {
-    nav {
+    .nav {
       transform: translateX(-250px);
     }
   }
 }
 
-nav > ul > li > a {
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 18px;
-  color: grey;
-  line-height: 1.8;
+.header {
+  display: fixed;
+  flex-direction: column;
+  min-height: 100vh;
+  // min-height: calc(100vh – 89px);
+  font-size: 22px;
 }
-// .la-nav__links {
-//   text-decoration: none;
-//   text-transform: uppercase;
-//   font-size: 18px;
-//   color: grey;
-//   line-height: 1.8;
-// }
+
+.la-nav__logo {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(41, 40, 38, 0);
+  & a:first-child {
+    flex-grow: 1;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    // background-color: rgba(41, 40, 38, 0);
+    padding: 20px;
+    span {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+  & a:last-child {
+    padding: 20px;
+    width: 100px;
+    // background: palevioletred;
+    color: rgb(255, 255, 255);
+    transition: width 500ms;
+    // &:hover {
+    //   nav {
+    //     transform: translateX(-250px);
+    //   }
+    // }
+  }
+}
 
 nav {
   position: fixed;
@@ -98,41 +92,54 @@ nav {
   top: 0;
   align-items: flex-start;
   padding: 20px;
-  list-style: none;
   color: rgb(255, 255, 255);
-  background-color: rgb(187, 139, 77);
+  background-color: rgb(24, 24, 23);
   transition: 500ms;
   // &.nav--visible {
   //   transform: translateX(-250px);
   // }
+  > ul > li > a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    line-height: 1.8;
+  }
 }
 
-// BANNER
-.la-nav__banner-wrapper {
+.la-nav__banner {
   display: block;
   text-align: center;
-  // justify-content: center;
-  padding: 300px 0;
+  padding: 280px 0;
   color: rgb(255, 255, 255);
-  font-weight: 300;
   font-size: 17px;
-  a {
-    color: rgb(255, 255, 255);
-  }
   p {
-    word-spacing: 3px;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    word-spacing: 5px;
+    letter-spacing: 5px;
+    font-size: 14px;
+    opacity: 0.6;
+    > a:first-child {
+      color: rgba(255, 255, 255, 1);
+    }
   }
   h2 {
     font-size: 100px;
-    font-weight: 300;
+    font-weight: 200;
     letter-spacing: 8px;
     margin: 0;
   }
 }
 
+hr {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  width: 35%;
+}
+
 /* ------------- DUAL COLUMN ------------- */
 .la-dualcolumn {
-  background-color: hotpink;
+  background-color: rgb(242, 242, 242);
   width: 100vw;
   box-sizing: border-box;
 
@@ -145,11 +152,11 @@ nav {
     text-align: center;
 
     &:nth-child(1) {
-      background-color: yellow;
+      background-color: rgb(255, 255, 255);
     }
 
     &:nth-child(2) {
-      background-color: orange;
+      background-color: rgb(255, 255, 255);
     }
 
     .la-dualcolumn__image {
@@ -160,14 +167,36 @@ nav {
 
     .la-dualcolumn__content {
       padding: 20px;
+      h3 {
+        font-size: 14px;
+      }
+
+      > p {
+        font-size: 15px;
+      }
     }
   }
 }
 
 /* ------------- FOOTER ------------- */
 footer {
+  display: block;
+  font-size: 13px;
   text-align: center;
-  padding: 20px;
+  padding-bottom: 40px;
   color: rgba(255, 249, 241, 0.7);
   background-color: rgb(24, 24, 23);
+  ul {
+    padding: 0;
+  }
+  ul li {
+    display: inline-block;
+    text-align: center;
+    padding: 50px 15px 0 15px;
+    cursor: pointer;
+    i {
+      color: rgba(255, 249, 241, 0.7);
+      font-size: 25px;
+    }
+  }
 }

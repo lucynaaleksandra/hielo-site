@@ -16,12 +16,12 @@
     <link rel="”stylesheet”" type="text/scss" href="”index.scss”" />
     <link
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      href="https://use.fontawesome.com/releases/v5.6.0/css/all.css"
+      integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h"
       crossorigin="anonymous"
     />
     <link
-      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600"
+      href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700"
       rel="stylesheet"
     />
     <title>GRID</title>
@@ -30,13 +30,13 @@
   <body>
     <main>
       <!-- HEADER -->
-      <section class="la-nav__wrapper">
+      <section class="la-nav">
         <header>
-          <div class="la-nav__logo-wrapper">
-            <a href="/asset/LOGO-GLD.png" class="la-nav__logo"
-              >Hello <span>by TEMPLATED</span></a
+          <div class="la-nav__logo">
+            <a href="https://templated.co/hielo" target="_blank"
+              >Hiello <span>by TEMPLATED</span></a
             >
-            <a href="#menu" class="la-nav__menu">MENU</a>
+            <a href="#menu"><span class="icon-menu">&#9776;</span> MENU</a>
           </div>
 
           <nav>
@@ -46,11 +46,12 @@
               <li><a href="elements.html">Elements</a></li>
             </ul>
           </nav>
-          <div class="la-nav__banner-wrapper">
+          <div class="la-nav__banner">
             <p>
               A free responsive website template by
               <a href="https://templated.co">TEMPLATED</a>
             </p>
+            <hr />
             <h2>Hiello</h2>
           </div>
         </header>
@@ -59,15 +60,13 @@
       <!-- DUAL COLUMN -->
       <section class="la-dualcolumn">
         <div>
-          <div class="la-dualcolumn__image">
-            <img src="/asset/cg-1.jpg" />
-            <h3>Some Image</h3>
-          </div>
+          <div class="la-dualcolumn__image"><img src="/asset/cg-1.jpg" /></div>
           <div class="la-dualcolumn__content">
-            <header>
+            <div>
+              <h3>Maecenas feugiat</h3>
               <p>maecenas sapien feugiat ex purus</p>
               <h2>Lorem ipsum dolor</h2>
-            </header>
+            </div>
             <p>
               Cras aliquet urna ut sapien tincidunt, quis malesuada elit
               facilisis. Vestibulum sit amet tortor velit. Nam elementum nibh a
@@ -79,15 +78,13 @@
         </div>
 
         <div>
-          <div class="la-dualcolumn__image">
-            <img src="/asset/cg-2.jpg" />
-            <h3>Other Image</h3>
-          </div>
+          <div class="la-dualcolumn__image"><img src="/asset/cg-2.jpg" /></div>
           <div class="la-dualcolumn__content">
-            <header>
+            <div>
+              <h3>Nam elementum</h3>
               <p>mattis elementum sapien pretium tellus</p>
               <h2>Vestibulum sit amet</h2>
-            </header>
+            </div>
             <p>
               Cras aliquet urna ut sapien tincidunt, quis malesuada elit
               facilisis. Vestibulum sit amet tortor velit. Nam elementum nibh a
@@ -99,7 +96,27 @@
         </div>
       </section>
 
-      <footer><span>TEMPLATED</span></footer>
+      <footer>
+        <ul>
+          <li>
+            <a href="#">
+              <i class="fab fa-twitter-square" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#"> <i class="fab fa-facebook" aria-hidden="true"></i> </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fab fa-instagram" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i> </a>
+          </li>
+        </ul>
+        <span>&copy; All rights reserved.</span>
+      </footer>
     </main>
   </body>
 </html>
