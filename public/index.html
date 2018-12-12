@@ -24,24 +24,23 @@
       href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600"
       rel="stylesheet"
     />
-
     <title>GRID</title>
   </head>
+
   <body>
-    <div id="root">
-      <!-- Nav -->
-      <div class="la-header__wrapper">
-        <header class="la-header__section">
-          <div class="la-header__main">
-            <a href="asset/LOGO-GLD.png" class="la-header__logo"
+    <main>
+      <!-- HEADER -->
+      <section class="la-header__wrapper">
+        <header>
+          <div class="la-header__logo-wrapper">
+            <a href="/asset/LOGO-GLD.png" class="la-header__logo"
               >Hello <span>by TEMPLATED</span></a
             >
             <a href="#menu" class="la-header__menu">MENU</a>
           </div>
-          <!-- </header> -->
 
-          <nav id="nav" class="la-nav__section">
-            <ul class="side-bar">
+          <nav>
+            <ul class="la-nav__side-bar">
               <li><a href="index.html" class="la-nav__links">Home</a></li>
               <li><a href="generic.html" class="la-nav__links">Generic</a></li>
               <li>
@@ -49,9 +48,7 @@
               </li>
             </ul>
           </nav>
-          <!-- <aside>SIDEBAR BIITCH</aside> -->
-          <section class="la-banner">
-            <!-- <img src="asset/coffee.jpg" alt="coffee" /> -->
+          <section class="la-banner__section">
             <div class="la-banner__inner-header">
               <p>
                 A free responsive website template by
@@ -61,9 +58,52 @@
             </div>
           </section>
         </header>
-      </div>
+      </section>
+
+      <!-- DUAL COLUMN -->
+      <section class="la-dualcolumn">
+        <div>
+          <div class="la-dualcolumn__image">
+            <img src="/asset/cg-1.jpg" />
+            <h3>Some Image</h3>
+          </div>
+          <div class="la-dualcolumn__content">
+            <header>
+              <p>maecenas sapien feugiat ex purus</p>
+              <h2>Lorem ipsum dolor</h2>
+            </header>
+            <p>
+              Cras aliquet urna ut sapien tincidunt, quis malesuada elit
+              facilisis. Vestibulum sit amet tortor velit. Nam elementum nibh a
+              libero pharetra elementum. Maecenas feugiat ex purus, quis
+              volutpat lacus placerat malesuada.
+            </p>
+            <footer><a href="#">Learn More</a></footer>
+          </div>
+        </div>
+
+        <div>
+          <div class="la-dualcolumn__image">
+            <img src="/asset/cg-2.jpg" />
+            <h3>Other Image</h3>
+          </div>
+          <div class="la-dualcolumn__content">
+            <header>
+              <p>mattis elementum sapien pretium tellus</p>
+              <h2>Vestibulum sit amet</h2>
+            </header>
+            <p>
+              Cras aliquet urna ut sapien tincidunt, quis malesuada elit
+              facilisis. Vestibulum sit amet tortor velit. Nam elementum nibh a
+              libero pharetra elementum. Maecenas feugiat ex purus, quis
+              volutpat lacus placerat malesuada.
+            </p>
+            <footer><a href="#">Learn More</a></footer>
+          </div>
+        </div>
+      </section>
 
       <footer class="la-footer__main"><span>TEMPLATED</span></footer>
-    </div>
+    </main>
   </body>
 </html>
