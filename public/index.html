@@ -22,20 +22,29 @@
       href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700"
       rel="stylesheet"
     />
+
     <title>GRID</title>
   </head>
 
   <body>
     <main>
       <!-- HEADER -->
-      <section class="la-nav">
+      <section id="la-nav" class="la-nav">
         <header>
           <div class="la-nav__logo">
             <a href="https://templated.co/hielo" target="_blank"
               >Hielo <span>by TEMPLATED</span></a
             >
-            <a href="#menu"><span class="icon-menu">&#9776;</span> MENU</a>
+            <a href="javascript:void(0)"><span>&#9776;</span> MENU</a>
           </div>
+
+          <!--
+            <div id="la-nav">
+              <a href="javascript:void(0)">HOME</a>
+              <a href="javascript:void(0)">CONTACT</a>
+              <a href="javascript:void(0)">ABOUT</a>
+            </div>
+          -->
 
           <nav class="la-nav--visible">
             <ul>
@@ -46,76 +55,65 @@
               <li><a href="elements.html">Elements</a></li>
             </ul>
           </nav>
-          <div class="la-nav__cover">
-            <p>
-              A free responsive website template by
-              <a href="https://templated.co">TEMPLATED</a>
-            </p>
-            <hr />
-            <h2>Hielo</h2>
-          </div>
         </header>
+
+        <div class="la-nav__cover">
+          <p>
+            A free responsive website template by
+            <a href="https://templated.co">TEMPLATED</a>
+          </p>
+          <hr />
+          <h2>Hielo</h2>
+        </div>
       </section>
 
       <!-- DUAL-COLUMN -->
-      <section class="la-dualcolumn">
-        <div>
-          <div class="la-dualcolumn__image">
-            <img src="/asset/siesta-4.jpg" />
-          </div>
-          <div class="la-dualcolumn__content">
-            <div>
-              <p>maecenas sapien feugiat ex purus</p>
-              <hr />
-              <h2>Lorem ipsum dolor</h2>
-            </div>
-            <p>
-              Cras aliquet urna ut sapien tincidunt, quis malesuada elit
-              facilisis. Vestibulum sit amet tortor velit. Nam elementum nibh a
-              libero pharetra elementum. Maecenas feugiat ex purus, quis
-              volutpat lacus placerat malesuada.
-            </p>
-            <button><a href="#">Learn More</a></button>
-          </div>
-        </div>
-
-        <div>
-          <div class="la-dualcolumn__image">
-            <img src="/asset/siesta-2.jpg" />
-          </div>
-          <div class="la-dualcolumn__content">
-            <div>
-              <p>mattis elementum sapien pretium tellus</p>
-              <hr />
-              <h2>Vestibulum sit amet</h2>
-            </div>
-            <p>
-              Cras aliquet urna ut sapien tincidunt, quis malesuada elit
-              facilisis. Vestibulum sit amet tortor velit. Nam elementum nibh a
-              libero pharetra elementum. Maecenas feugiat ex purus, quis
-              volutpat lacus placerat malesuada.
-            </p>
-            <button><a href="#">Learn More</a></button>
-          </div>
-        </div>
-      </section>
-
-      <!-- BANNER -->
-      <section class="la-banner__wrapper">
-        <div class="la-banner__headings">
-          <p>
-            Nam vel ante sit amet libero scelerisque facilisis eleifend vitae
-            urna
-          </p>
-          <hr />
-          <h2>Morbi maximus justo</h2>
-        </div>
-      </section>
-
-      <!-- FOUR-GRID -->
-      <section class="la-fourgrid">
-        <div class="la-fourgrid__content">
+      <div class="content">
+        <section class="la-dualcolumn">
           <div>
+            <div class="la-dualcolumn__image">
+              <img src="/asset/siesta-4.jpg" />
+            </div>
+            <div class="la-dualcolumn__content">
+              <div>
+                <p>maecenas sapien feugiat ex purus</p>
+                <hr />
+                <h2>Lorem ipsum dolor</h2>
+              </div>
+              <p>
+                Cras aliquet urna ut sapien tincidunt, quis malesuada elit
+                facilisis. Vestibulum sit amet tortor velit. Nam elementum nibh
+                a libero pharetra elementum. Maecenas feugiat ex purus, quis
+                volutpat lacus placerat malesuada.
+              </p>
+              <button><a href="#">Learn More</a></button>
+            </div>
+          </div>
+
+          <div>
+            <div class="la-dualcolumn__image">
+              <img src="/asset/siesta-2.jpg" />
+            </div>
+            <div class="la-dualcolumn__content">
+              <div>
+                <p>mattis elementum sapien pretium tellus</p>
+                <hr />
+                <h2>Vestibulum sit amet</h2>
+              </div>
+              <p>
+                Cras aliquet urna ut sapien tincidunt, quis malesuada elit
+                facilisis. Vestibulum sit amet tortor velit. Nam elementum nibh
+                a libero pharetra elementum. Maecenas feugiat ex purus, quis
+                volutpat lacus placerat malesuada.
+              </p>
+              <button><a href="#">Learn More</a></button>
+            </div>
+          </div>
+        </section>
+
+        <!-- BANNER -->
+        <section class="la-banner__wrapper">
+          <div class="la-banner__headings">
             <p>
               Nam vel ante sit amet libero scelerisque facilisis eleifend vitae
               urna
@@ -123,46 +121,79 @@
             <hr />
             <h2>Morbi maximus justo</h2>
           </div>
+        </section>
 
-          <div class="la-fourgrid__gallery">
+        <!-- FOUR-GRID -->
+        <section class="la-fourgrid">
+          <div class="la-fourgrid__content">
             <div>
-              <a href="#"><img src="/asset/siesta-2.jpg"/></a>
+              <p>
+                Nam vel ante sit amet libero scelerisque facilisis eleifend
+                vitae urna
+              </p>
+              <hr />
+              <h2>Morbi maximus justo</h2>
             </div>
-            <div>
-              <a href="#"><img src="/asset/siesta-3.jpg"/></a>
-            </div>
-            <div>
-              <a href="#"><img src="/asset/siesta-4.jpg"/></a>
-            </div>
-            <div>
-              <a href="#"><img src="/asset/siesta-1.jpg"/></a>
+
+            <div class="la-fourgrid__gallery">
+              <div>
+                <a href="#"><img src="/asset/siesta-2.jpg"/></a>
+              </div>
+              <div>
+                <a href="#"><img src="/asset/siesta-3.jpg"/></a>
+              </div>
+              <div>
+                <a href="#"><img src="/asset/siesta-4.jpg"/></a>
+              </div>
+              <div>
+                <a href="#"><img src="/asset/siesta-1.jpg"/></a>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- FOOTER -->
-      <footer>
-        <ul>
-          <li>
-            <a href="#">
-              <i class="fab fa-twitter-square" aria-hidden="true"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#"> <i class="fab fa-facebook" aria-hidden="true"></i> </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="fab fa-instagram" aria-hidden="true"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i> </a>
-          </li>
-        </ul>
-        <span>&copy; All rights reserved.</span>
-      </footer>
+        <!-- FOOTER -->
+        <footer>
+          <ul>
+            <li>
+              <a href="#">
+                <i class="fab fa-twitter-square" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fab fa-facebook" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i> </a>
+            </li>
+          </ul>
+          <span>&copy; All rights reserved.</span>
+        </footer>
+      </div>
     </main>
+
+    <script>
+      window.onscroll = function() {
+        myFunction();
+      };
+
+      var navbar = document.getElementById("navbar");
+      var sticky = navbar.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky");
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+    </script>
   </body>
 </html>

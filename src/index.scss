@@ -1,3 +1,5 @@
+// @import "./slideshow/slideshow.scss";
+
 body,
 html {
   -moz-box-sizing: border-box;
@@ -31,6 +33,7 @@ li {
 
 /* ------------- NAV ------------- */
 
+#la-nav,
 .la-nav {
   background-image: linear-gradient(
       rgba(12, 12, 12, 0.7),
@@ -41,6 +44,8 @@ li {
   background-position: center;
   margin: 0;
   color: rgb(253, 243, 230);
+  overflow: hidden;
+  background-color: rgba(41, 40, 38, 0);
   // &:hover {
   //   .nav {
   //     transform: translateX(-250px);
@@ -48,10 +53,32 @@ li {
   // }
 }
 
+/* ------------- STICKY NAV ------------- */
+
+#la-nav a {
+  color: hotpink;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+// .sticky + .content {
+//   padding-top: 60px;
+// }
+
+/* ------------- HEADER ------------- */
+
 .header {
   display: fixed;
   flex-direction: column;
-  min-height: 100vh;
+  max-height: 100vh;
   // min-height: calc(100vh – 89px);
   font-size: 22px;
 }
@@ -73,14 +100,9 @@ li {
   // menu
   & a:last-child {
     padding: 20px;
-    width: 100px;
+    width: 75px;
     color: rgb(255, 255, 255);
     transition: width 500ms;
-    // &:hover {
-    //   nav {
-    //     transform: translateX(-250px);
-    //   }
-    // }
   }
 }
 
@@ -93,20 +115,27 @@ nav {
   align-items: flex-start;
   padding: 20px;
   color: rgb(255, 255, 255);
-  background-color: rgb(24, 24, 23);
+  background-color: rgb(29, 29, 29);
   transition: 500ms;
 
-  &.la-nav--visible {
-    transform: translateX(-250px);
-    li a {
-      color: rgba(255, 255, 255, 0.5);
-      font-size: 16px;
-    }
-    ul ~ hr {
-      border: 1px solid rgba(80, 80, 80, 0.4);
-      width: 80%;
-    }
-  }
+  // &.la-nav--visible {
+  //   position: absolute;
+  //   max-height: 100vh;
+  //   transform: translateX(-250px);
+  //   ul {
+  //     padding-left: 5px;
+  //     li a {
+  //       color: rgba(176, 176, 176, 0.5);
+  //       font-size: 16px;
+  //       font-weight: 300;
+  //     }
+  //   }
+  //   ul hr {
+  //     border: 0.5px solid rgba(116, 115, 115, 0.3);
+  //     width: 230px;
+  //     margin-right: 25px;
+  //   }
+  // }
 
   > ul > li > a {
     text-decoration: none;
@@ -117,6 +146,7 @@ nav {
   }
 }
 
+// slider
 .la-nav__cover {
   display: block;
   text-align: center;
@@ -143,6 +173,13 @@ nav {
     font-weight: 200;
     letter-spacing: 8px;
     margin: 0;
+  }
+}
+
+.la-nav__cover {
+  img {
+    background-size: cover;
+    background-position: center;
   }
 }
 
