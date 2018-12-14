@@ -29,31 +29,24 @@
   <body>
     <main>
       <!-- HEADER -->
-      <section id="la-nav" class="la-nav">
+      <section class="la-nav">
         <header>
           <div class="la-nav__logo">
             <a href="https://templated.co/hielo" target="_blank"
               >Hielo <span>by TEMPLATED</span></a
             >
-            <a href="javascript:void(0)"><span>&#9776;</span> MENU</a>
+            <a href="#menu" onclick="openNav()"><span>&#9776;</span> MENU</a>
           </div>
 
-          <!--
-            <div id="la-nav">
-              <a href="javascript:void(0)">HOME</a>
-              <a href="javascript:void(0)">CONTACT</a>
-              <a href="javascript:void(0)">ABOUT</a>
-            </div>
-          -->
-
-          <nav class="la-nav--visible">
-            <ul>
-              <li><a href="index.html" class="la-nav__links">Home</a></li>
-              <hr />
-              <li><a href="generic.html">Generic</a></li>
-              <hr />
-              <li><a href="elements.html">Elements</a></li>
-            </ul>
+          <nav class="la-nav--visible" id="mySidenav">
+            <a href="javascript:void(0)" onclick="closeNav()" class="closebtn"
+              >&times;</a
+            >
+            <a href="generic.html">Home</a>
+            <hr />
+            <a href="generic.html">Generic</a>
+            <hr />
+            <a href="elements.html">Elements</a>
           </nav>
         </header>
 
@@ -180,20 +173,28 @@
     </main>
 
     <script>
-      window.onscroll = function() {
-        myFunction();
-      };
-
-      var navbar = document.getElementById("navbar");
-      var sticky = navbar.offsetTop;
-
-      function myFunction() {
-        if (window.pageYOffset >= sticky) {
-          navbar.classList.add("sticky");
-        } else {
-          navbar.classList.remove("sticky");
-        }
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "200px";
       }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+
+      // window.onscroll = function() {
+      //   myFunction();
+      // };
+
+      // var navbar = document.getElementById("navbar");
+      // var sticky = navbar.offsetTop;
+
+      // function myFunction() {
+      //   if (window.pageYOffset >= sticky) {
+      //     navbar.classList.add("sticky");
+      //   } else {
+      //     navbar.classList.remove("sticky");
+      //   }
+      // }
     </script>
   </body>
 </html>
