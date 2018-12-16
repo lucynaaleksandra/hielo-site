@@ -30,6 +30,12 @@
     <main>
       <!-- HEADER -->
       <section class="la-nav">
+        <div class="la-nav__background la-nav__background-0"></div>
+
+        <div class="la-nav__background la-nav__background-1"></div>
+
+        <div class="la-nav__background la-nav__background-2"></div>
+
         <header>
           <div class="la-nav__logo">
             <a href="https://templated.co/hielo" target="_blank"
@@ -38,8 +44,11 @@
             <a href="#menu" onclick="openNav()"><span>&#9776;</span> MENU</a>
           </div>
 
-          <nav class="la-nav--visible" id="mySidenav">
-            <a href="javascript:void(0)" onclick="closeNav()" class="closebtn"
+          <nav class="la-nav__sidebar">
+            <a
+              href="javascript:void(0)"
+              onclick="closeNav()"
+              class="la-nav__closebtn"
               >&times;</a
             >
             <a href="generic.html">Home</a>
@@ -174,11 +183,15 @@
 
     <script>
       function openNav() {
-        document.getElementById("mySidenav").style.width = "200px";
+        document
+          .querySelector(".la-nav__sidebar")
+          .classList.add("la-nav__sidebar--visible");
       }
 
       function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
+        document
+          .querySelector(".la-nav__sidebar")
+          .classList.remove("la-nav__sidebar--visible");
       }
 
       // window.onscroll = function() {

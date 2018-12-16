@@ -29,19 +29,133 @@ li {
   list-style: none;
 }
 
-/* ------------- NAV ------------- */
+/* ------------- HEADER ------------- */
+.la-nav {
+  position: relative;
+  // background-image: linear-gradient(
+  //     rgba(12, 12, 12, 0.7),
+  //     rgba(12, 12, 12, 0.7)
+  //   ),
+  //   url(/asset/siesta-2.jpg);
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  color: rgb(253, 243, 230);
+  //background-color: rgba(41, 40, 38, 0);
+  background-color: brown;
+
+  transition: all ease-out 300ms;
+
+  &.la-nav--active-0 {
+    background-color: orange;
+
+    .la-nav__background-0 {
+      opacity: 1;
+    }
+  }
+
+  &.la-nav--active-1 {
+    background-color: orange;
+
+    .la-nav__background-1 {
+      opacity: 1;
+    }
+  }
+
+  &.la-nav--active-2 {
+    background-color: orange;
+
+    .la-nav__background-2 {
+      opacity: 1;
+    }
+  }
+
+  .la-nav--active-1 {
+    background-color: hotpink;
+  }
+
+  .la-nav--active-2 {
+    background-color: green;
+  }
+
+  .la-nav__background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    opacity: 0;
+    transition: opacity ease-out 500ms;
+
+    &.la-nav__background-0 {
+      background-image: url(http://placekitten.com/1200/1200);
+    }
+
+    &.la-nav__background-1 {
+      background-image: url(http://placekitten.com/1500/1500);
+    }
+
+    &.la-nav__background-2 {
+      background-image: url(http://placekitten.com/2000/2000);
+    }
+  }
+}
+
+.la-nav__cover {
+  position: relative;
+  display: block;
+  text-align: center;
+  padding: 280px 0;
+  color: rgb(255, 255, 255);
+  font-size: 17px;
+  z-index: 5;
+  p {
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    word-spacing: 2px;
+    letter-spacing: 5px;
+    font-size: 15px;
+    opacity: 0.6;
+    > a:first-child {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+  hr {
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
+    width: 25%;
+  }
+  h2 {
+    font-size: 100px;
+    font-weight: 300;
+    letter-spacing: 8px;
+    margin: 0;
+  }
+}
+
+.la-nav__cover {
+  img {
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+/* ------------- NAV & SIDEBAR------------- */
 .header {
   display: fixed;
   flex-direction: column;
   max-height: 100vh;
   // min-height: calc(100vh – 89px);
   font-size: 22px;
+  position: relative;
+  z-index: 5;
 }
 
 .la-nav__logo {
   display: flex;
   justify-content: space-between;
-  background-color: rgba(41, 40, 38, 0);
 
   & a:first-child {
     flex-grow: 1;
@@ -61,65 +175,50 @@ li {
   }
 }
 
-nav {
-  position: fixed;
-  width: 250px;
+.la-nav__sidebar {
+  position: absolute;
+  width: 200px;
   height: 100vh;
   left: 100vw;
   top: 0;
-  align-items: flex-start;
-  padding: 20px;
-  color: rgb(255, 255, 255);
   background-color: rgb(29, 29, 29);
-  transition: 500ms;
-
-  > a {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 18px;
-    color: rgb(255, 255, 255);
-    line-height: 1.5;
-  }
-}
-
-/* ------------- SIDEBAR NAV ------------- */
-.la-nav--visible {
-  position: absolute;
-  max-height: 100vh;
-  width: 0;
-  top: 0;
-  right: 0;
   z-index: 1;
-  background-color: #111;
   overflow-x: hidden;
   padding-top: 90px;
   transition: 0.5s;
-  transform: translateX(-230px);
-}
+  transform: scale(1.4);
+  transform-origin: 0 50%;
 
-.la-nav--visible a {
-  display: block;
-  padding: 8px 8px 8px 32px;
-  color: #818181;
-  text-transform: uppercase;
-  transition: 0.3s;
-}
+  > a {
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 1;
+    display: block;
+    padding: 8px 8px 8px 32px;
+    color: #818181;
 
-.la-nav--visible a:hover {
-  color: #ebebeb;
-}
+    &:hover {
+      color: #ebebeb;
+    }
 
-nav .closebtn {
-  position: absolute;
-  top: 15px;
-  right: 25px;
-  font-size: 35px;
-  cursor: pointer;
+    &.la-nav__closebtn {
+      position: absolute;
+      top: 15px;
+      right: 25px;
+      font-size: 30px;
+      cursor: pointer;
+    }
+  }
+
+  &.la-nav__sidebar--visible {
+    transform: translateX(-200px) scale(1);
+  }
 }
 
 a ~ hr {
-  border: 0.5px solid rgba(255, 255, 255, 0.5);
+  border: 0.5px solid rgba(255, 255, 255, 0.3);
   width: 80%;
+  padding-right: 10px;
 }
 
 /* ------------- STICKY NAV ------------- */
@@ -137,58 +236,6 @@ a ~ hr {
 // .sticky + .content {
 //   padding-top: 60px;
 // }
-
-/* ------------- HEADER ------------- */
-#la-nav,
-.la-nav {
-  background-image: linear-gradient(
-      rgba(12, 12, 12, 0.7),
-      rgba(12, 12, 12, 0.7)
-    ),
-    url(/asset/siesta-2.jpg);
-  background-size: cover;
-  background-position: center;
-  margin: 0;
-  color: rgb(253, 243, 230);
-  background-color: rgba(41, 40, 38, 0);
-  // overflow: hidden;
-}
-
-.la-nav__cover {
-  display: block;
-  text-align: center;
-  padding: 280px 0;
-  color: rgb(255, 255, 255);
-  font-size: 17px;
-  p {
-    margin-bottom: 35px;
-    text-transform: uppercase;
-    word-spacing: 3px;
-    letter-spacing: 5px;
-    font-size: 14px;
-    opacity: 0.6;
-    > a:first-child {
-      color: rgba(255, 255, 255, 1);
-    }
-  }
-  hr {
-    border: 0.5px solid rgba(255, 255, 255, 0.5);
-    width: 25%;
-  }
-  h2 {
-    font-size: 100px;
-    font-weight: 200;
-    letter-spacing: 8px;
-    margin: 0;
-  }
-}
-
-.la-nav__cover {
-  img {
-    background-size: cover;
-    background-position: center;
-  }
-}
 
 /* ------------- DUAL COLUMN ------------- */
 .la-dualcolumn {
@@ -275,7 +322,6 @@ a ~ hr {
   background-position: center;
   background-attachment: fixed;
   min-height: 20vh;
-  overflow: hidden;
 
   .la-banner__headings {
     display: block;
