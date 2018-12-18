@@ -47,38 +47,32 @@ li {
 
   &.la-nav--active-0 {
     background-color: orange;
-
     .la-nav__background-0 {
       opacity: 1;
     }
   }
-
   &.la-nav--active-1 {
-    background-color: orange;
-
+    background-color: hotpink;
     .la-nav__background-1 {
       opacity: 1;
     }
   }
-
   &.la-nav--active-2 {
-    background-color: orange;
-
+    background-color: green;
     .la-nav__background-2 {
       opacity: 1;
     }
   }
 
-  .la-nav--active-1 {
-    background-color: hotpink;
-  }
-
-  .la-nav--active-2 {
-    background-color: green;
-  }
+  // .la-nav--active-1 {
+  //   background-color: hotpink;
+  // }
+  // .la-nav--active-2 {
+  //   background-color: green;
+  // }
 
   .la-nav__background {
-    position: absolute;
+    position: relative;
     left: 0;
     top: 0;
     bottom: 0;
@@ -92,11 +86,9 @@ li {
     &.la-nav__background-0 {
       background-image: url(http://placekitten.com/1200/1200);
     }
-
     &.la-nav__background-1 {
       background-image: url(http://placekitten.com/1500/1500);
     }
-
     &.la-nav__background-2 {
       background-image: url(http://placekitten.com/2000/2000);
     }
@@ -110,7 +102,8 @@ li {
   padding: 280px 0;
   color: rgb(255, 255, 255);
   font-size: 17px;
-  z-index: 5;
+  // z-index: 3;
+
   p {
     margin-bottom: 35px;
     text-transform: uppercase;
@@ -122,10 +115,12 @@ li {
       color: rgba(255, 255, 255, 1);
     }
   }
+
   hr {
     border: 0.5px solid rgba(255, 255, 255, 0.5);
     width: 25%;
   }
+
   h2 {
     font-size: 100px;
     font-weight: 300;
@@ -134,91 +129,12 @@ li {
   }
 }
 
-.la-nav__cover {
-  img {
-    background-size: cover;
-    background-position: center;
-  }
-}
-
-/* ------------- NAV & SIDEBAR------------- */
-.header {
-  display: fixed;
-  flex-direction: column;
-  position: relative;
-  max-height: 100vh;
-  // min-height: calc(100vh – 89px);
-  font-size: 22px;
-  z-index: 5;
-}
-
-.la-nav__logo {
-  display: flex;
-  justify-content: space-between;
-
-  & a:first-child {
-    flex-grow: 1;
-    align-items: center;
-    color: rgb(255, 255, 255);
-    padding: 20px;
-    span {
-      color: rgba(255, 255, 255, 0.5);
-    }
-  }
-  // menu
-  & a:last-child {
-    padding: 20px;
-    width: 75px;
-    color: rgb(255, 255, 255);
-    transition: width 500ms;
-  }
-}
-
-.la-nav__sidebar {
-  position: absolute;
-  width: 200px;
-  height: 100vh;
-  left: 100vw;
-  top: 0;
-  background-color: rgb(29, 29, 29);
-  z-index: 1;
-  overflow-x: hidden;
-  padding-top: 90px;
-  transition: 0.5s;
-  transform: scale(1.4);
-  transform-origin: 0 50%;
-
-  > a {
-    text-transform: uppercase;
-    font-size: 18px;
-    line-height: 1;
-    display: block;
-    padding: 8px 8px 8px 32px;
-    color: #818181;
-
-    &:hover {
-      color: #ebebeb;
-    }
-
-    &.la-nav__closebtn {
-      position: absolute;
-      top: 15px;
-      right: 25px;
-      font-size: 30px;
-      cursor: pointer;
-    }
-  }
-
-  &.la-nav__sidebar--visible {
-    transform: translateX(-200px) scale(1);
-  }
-}
-
-a ~ hr {
-  border: 0.5px solid rgba(255, 255, 255, 0.3);
-  width: 80%;
-  padding-right: 10px;
-}
+// .la-nav__cover {
+//   img {
+//     background-size: cover;
+//     background-position: center;
+//   }
+// }
 
 /* ------------- RADIO BTNS ------------- */
 
@@ -228,20 +144,20 @@ a ~ hr {
   & label {
     display: inline-block;
     position: relative;
-    padding-left: 30px;
+    padding-left: 25px;
     margin-bottom: 40px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;
+    // user-select: none;
 
     & input {
       appearance: none;
       position: absolute;
       top: 0;
       left: 0;
-      height: 15px;
-      width: 15px;
+      height: 12px;
+      width: 12px;
       background-color: rgba(255, 255, 255, 0.3);
       border-radius: 50%;
       outline: none;
@@ -255,11 +171,97 @@ label > input:checked {
   background-color: rgba(253, 252, 252, 1);
 }
 
+/* ------------- NAV & SIDEBAR------------- */
+.header {
+  position: fixed;
+  flex-direction: column;
+  max-height: 100vh;
+  // min-height: calc(100vh – 89px);
+  font-size: 22px;
+  z-index: 2;
+}
+
+.la-nav__logo {
+  display: flex;
+  justify-content: space-between;
+
+  & a:first-child {
+    flex-grow: 1;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+
+    span {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  // menu
+  & a:last-child {
+    padding: 20px;
+    width: 75px;
+    color: rgb(255, 255, 255);
+    // color: hotpink;
+    transition: width 500ms;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.la-nav__sidebar {
+  position: absolute;
+  width: 250px;
+  height: 100vh;
+  left: 100vw;
+  top: 0;
+  background-color: rgb(29, 29, 29);
+  z-index: 5;
+  overflow-x: hidden;
+  padding-top: 90px;
+  transition: 500ms;
+  transform: scale(1.4);
+  transform-origin: 0 50%;
+
+  > a {
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 1;
+    display: block;
+    padding: 8px 8px 8px 32px;
+    color: #818181;
+
+    &:hover {
+      color: #ebebeb;
+      cursor: pointer;
+    }
+
+    &.la-nav__closebtn {
+      position: absolute;
+      top: 15px;
+      right: 25px;
+      font-size: 30px;
+      cursor: pointer;
+    }
+  }
+
+  &.la-nav__sidebar--visible {
+    transform: translateX(-250px) scale(1);
+  }
+}
+
+a ~ hr {
+  border: 0.5px solid rgba(255, 255, 255, 0.3);
+  width: 80%;
+  padding-right: 10px;
+}
+
 /* ------------- STICKY NAV ------------- */
 // #la-nav a {
 //   color: hotpink;
 // }
-// .content {
+// .la-nav__logo {
 //   padding: 16px;
 // }
 // .sticky {
