@@ -29,40 +29,90 @@ li {
   list-style: none;
 }
 
+/* ------------- SLIDES ------------- */
+// .la-nav__slides {
+//   display: none;
+// }
+
+.la-nav__img-cover {
+  // vertical-align: middle;
+  position: absolute;
+  background-image: linear-gradient(
+    rgba(12, 12, 12, 0.7),
+    rgba(12, 12, 12, 0.7)
+  );
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  // color: rgb(253, 243, 230);
+  // background-color: rgba(41, 40, 38, 0);
+  transition: all ease-out 300ms;
+}
+
+/* Slideshow container */
+.la-nav__slideshow-container {
+  max-width: 100vw;
+  position: relative;
+  // margin: auto;
+}
+
+/* The dots/bullets/indicators */
+.la-nav__checkmark {
+  cursor: pointer;
+  height: 14px;
+  width: 14px;
+  margin: 10px 4px;
+  background-color: rgba(187, 187, 187, 0.5);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+}
+.active,
+.la-nav__checkmark:hover {
+  background-color: rgb(241, 241, 241);
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
 /* ------------- HEADER ------------- */
 .la-nav {
-  position: relative;
+  // position: relative;
   // background-image: linear-gradient(
   //     rgba(12, 12, 12, 0.7),
   //     rgba(12, 12, 12, 0.7)
   //   ),
   //   url(/asset/siesta-2.jpg);
-  background-size: cover;
-  background-position: center;
-  margin: 0;
-  color: rgb(253, 243, 230);
+  // background-size: cover;
+  // background-position: center;
+  // margin: 0;
+  // color: rgb(253, 243, 230);
   // background-color: rgba(41, 40, 38, 0);
-  background-color: brown;
-  transition: all ease-out 300ms;
+  // // background-color: brown;
+  // transition: all ease-out 300ms;
 
-  &.la-nav--active-0 {
-    background-color: orange;
-    .la-nav__background-0 {
-      opacity: 1;
-    }
-  }
-  &.la-nav--active-1 {
-    background-color: hotpink;
-    .la-nav__background-1 {
-      opacity: 1;
-    }
-  }
-  &.la-nav--active-2 {
-    background-color: green;
-    .la-nav__background-2 {
-      opacity: 1;
-    }
-  }
+  // &.la-nav--active-0 {
+  //   background-color: orange;
+  //   .la-nav__background-0 {
+  //     opacity: 1;
+  //   }
+  // }
+  // &.la-nav--active-1 {
+  //   background-color: hotpink;
+  //   .la-nav__background-1 {
+  //     opacity: 1;
+  //   }
+  // }
+  // &.la-nav--active-2 {
+  //   background-color: green;
+  //   .la-nav__background-2 {
+  //     opacity: 1;
+  //   }
+  // }
 
   // .la-nav--active-1 {
   //   background-color: hotpink;
@@ -71,28 +121,28 @@ li {
   //   background-color: green;
   // }
 
-  .la-nav__background {
-    position: relative;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    background-size: cover;
-    background-position: center;
-    z-index: 0;
-    opacity: 0;
-    transition: opacity ease-out 500ms;
+  // .la-nav__background {
+  //   position: relative;
+  //   left: 0;
+  //   top: 0;
+  //   bottom: 0;
+  //   right: 0;
+  //   background-size: cover;
+  //   background-position: center;
+  //   z-index: 0;
+  //   opacity: 0;
+  //   transition: opacity ease-out 500ms;
 
-    &.la-nav__background-0 {
-      background-image: url(http://placekitten.com/1200/1200);
-    }
-    &.la-nav__background-1 {
-      background-image: url(http://placekitten.com/1500/1500);
-    }
-    &.la-nav__background-2 {
-      background-image: url(http://placekitten.com/2000/2000);
-    }
-  }
+  //   &.la-nav__background-0 {
+  //     background-image: url(http://placekitten.com/1200/1200);
+  //   }
+  //   &.la-nav__background-1 {
+  //     background-image: url(http://placekitten.com/1500/1500);
+  //   }
+  //   &.la-nav__background-2 {
+  //     background-image: url(http://placekitten.com/2000/2000);
+  //   }
+  // }
 }
 
 .la-nav__cover {
@@ -136,41 +186,6 @@ li {
 //   }
 // }
 
-/* ------------- RADIO BTNS ------------- */
-
-.la-nav__radio-container {
-  text-align: center;
-
-  & label {
-    display: inline-block;
-    position: relative;
-    padding-left: 25px;
-    margin-bottom: 40px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    // user-select: none;
-
-    & input {
-      appearance: none;
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 12px;
-      width: 12px;
-      background-color: rgba(255, 255, 255, 0.3);
-      border-radius: 50%;
-      outline: none;
-      cursor: pointer;
-      transition: 0.4s;
-    }
-  }
-}
-
-label > input:checked {
-  background-color: rgba(253, 252, 252, 1);
-}
-
 /* ------------- NAV & SIDEBAR------------- */
 .header {
   position: fixed;
@@ -178,7 +193,7 @@ label > input:checked {
   max-height: 100vh;
   // min-height: calc(100vh – 89px);
   font-size: 22px;
-  z-index: 2;
+  z-index: 6;
 }
 
 .la-nav__logo {
@@ -462,3 +477,38 @@ footer {
     }
   }
 }
+
+// /* ------------- RADIO BTNS ------------- */
+
+// .la-nav__radio-container {
+//   text-align: center;
+
+//   & label {
+//     display: inline-block;
+//     position: relative;
+//     padding-left: 25px;
+//     margin-bottom: 40px;
+//     -webkit-user-select: none;
+//     -moz-user-select: none;
+//     -ms-user-select: none;
+//     // user-select: none;
+
+//     & input {
+//       appearance: none;
+//       position: absolute;
+//       top: 0;
+//       left: 0;
+//       height: 12px;
+//       width: 12px;
+//       background-color: rgba(255, 255, 255, 0.3);
+//       border-radius: 50%;
+//       outline: none;
+//       cursor: pointer;
+//       transition: 0.4s;
+//     }
+//   }
+// }
+
+// label > input:checked {
+//   background-color: rgba(253, 252, 252, 1);
+// }
