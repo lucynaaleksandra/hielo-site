@@ -29,254 +29,210 @@ li {
   list-style: none;
 }
 
-/* ------------- SLIDES ------------- */
-// .la-nav__slides {
-//   display: none;
-// }
+/* ------------- SECTION - NAV + HEADER ------------- */
 
-.la-nav__img-cover {
-  // vertical-align: middle;
-  position: absolute;
-  background-image: linear-gradient(
-    rgba(12, 12, 12, 0.7),
-    rgba(12, 12, 12, 0.7)
-  );
-  background-size: cover;
-  background-position: center;
-  margin: 0;
-  // color: rgb(253, 243, 230);
-  // background-color: rgba(41, 40, 38, 0);
-  transition: all ease-out 300ms;
-}
-
-/* Slideshow container */
-.la-nav__slideshow-container {
+.la-nav {
   max-width: 100vw;
   position: relative;
-  // margin: auto;
-}
 
-/* The dots/bullets/indicators */
-.la-nav__checkmark {
-  cursor: pointer;
-  height: 14px;
-  width: 14px;
-  margin: 10px 4px;
-  background-color: rgba(187, 187, 187, 0.5);
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.5s ease;
-}
-.active,
-.la-nav__checkmark:hover {
-  background-color: rgb(241, 241, 241);
-}
+  header {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    font-size: 19px;
 
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
+    & a:first-child {
+      color: rgb(255, 255, 255);
+      padding: 20px;
 
-/* ------------- HEADER ------------- */
-.la-nav {
-  // position: relative;
-  // background-image: linear-gradient(
-  //     rgba(12, 12, 12, 0.7),
-  //     rgba(12, 12, 12, 0.7)
-  //   ),
-  //   url(/asset/siesta-2.jpg);
-  // background-size: cover;
-  // background-position: center;
-  // margin: 0;
-  // color: rgb(253, 243, 230);
-  // background-color: rgba(41, 40, 38, 0);
-  // // background-color: brown;
-  // transition: all ease-out 300ms;
+      span {
+        color: rgba(255, 255, 255, 0.5);
+      }
+    }
 
-  // &.la-nav--active-0 {
-  //   background-color: orange;
-  //   .la-nav__background-0 {
-  //     opacity: 1;
-  //   }
-  // }
-  // &.la-nav--active-1 {
-  //   background-color: hotpink;
-  //   .la-nav__background-1 {
-  //     opacity: 1;
-  //   }
-  // }
-  // &.la-nav--active-2 {
-  //   background-color: green;
-  //   .la-nav__background-2 {
-  //     opacity: 1;
-  //   }
-  // }
+    // menu
+    & a:last-child {
+      padding: 20px;
+      width: 75px;
+      color: rgb(255, 255, 255);
+      transition: width 500ms;
 
-  // .la-nav--active-1 {
-  //   background-color: hotpink;
-  // }
-  // .la-nav--active-2 {
-  //   background-color: green;
-  // }
-
-  // .la-nav__background {
-  //   position: relative;
-  //   left: 0;
-  //   top: 0;
-  //   bottom: 0;
-  //   right: 0;
-  //   background-size: cover;
-  //   background-position: center;
-  //   z-index: 0;
-  //   opacity: 0;
-  //   transition: opacity ease-out 500ms;
-
-  //   &.la-nav__background-0 {
-  //     background-image: url(http://placekitten.com/1200/1200);
-  //   }
-  //   &.la-nav__background-1 {
-  //     background-image: url(http://placekitten.com/1500/1500);
-  //   }
-  //   &.la-nav__background-2 {
-  //     background-image: url(http://placekitten.com/2000/2000);
-  //   }
-  // }
-}
-
-.la-nav__cover {
-  position: relative;
-  display: block;
-  text-align: center;
-  padding: 280px 0;
-  color: rgb(255, 255, 255);
-  font-size: 17px;
-  // z-index: 3;
-
-  p {
-    margin-bottom: 35px;
-    text-transform: uppercase;
-    word-spacing: 2px;
-    letter-spacing: 5px;
-    font-size: 15px;
-    opacity: 0.6;
-    > a:first-child {
-      color: rgba(255, 255, 255, 1);
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 
-  hr {
-    border: 0.5px solid rgba(255, 255, 255, 0.5);
-    width: 25%;
-  }
+  .la-nav__sidebar {
+    position: absolute;
+    width: 250px;
+    height: 100vh;
+    left: 100vw;
+    top: 0;
+    background-color: rgb(29, 29, 29);
+    z-index: 5;
+    overflow-x: hidden;
+    padding-top: 90px;
+    transition: 500ms;
+    transform: scale(1.4);
+    transform-origin: 0 50%;
 
-  h2 {
-    font-size: 100px;
-    font-weight: 300;
-    letter-spacing: 8px;
-    margin: 0;
-  }
-}
+    > a {
+      text-transform: uppercase;
+      font-size: 18px;
+      line-height: 1;
+      display: block;
+      padding: 8px 8px 8px 32px;
+      color: #818181;
 
-// .la-nav__cover {
-//   img {
-//     background-size: cover;
-//     background-position: center;
-//   }
-// }
+      & ~ hr {
+        border: 0.5px solid rgba(255, 255, 255, 0.3);
+        width: 80%;
+        padding-right: 10px;
+      }
 
-/* ------------- NAV & SIDEBAR------------- */
-.header {
-  position: fixed;
-  flex-direction: column;
-  max-height: 100vh;
-  // min-height: calc(100vh – 89px);
-  font-size: 22px;
-  z-index: 6;
-}
+      &:hover {
+        color: #ebebeb;
+        cursor: pointer;
+      }
 
-.la-nav__logo {
-  display: flex;
-  justify-content: space-between;
+      &.la-nav__closebtn {
+        position: absolute;
+        top: 15px;
+        right: 25px;
+        font-size: 30px;
+        cursor: pointer;
+      }
+    }
 
-  & a:first-child {
-    flex-grow: 1;
-    align-items: center;
-    color: rgb(255, 255, 255);
-    padding: 20px;
-
-    span {
-      color: rgba(255, 255, 255, 0.5);
+    &.la-nav__sidebar--visible {
+      transform: translateX(-250px) scale(1);
     }
   }
 
-  // menu
-  & a:last-child {
-    padding: 20px;
-    width: 75px;
-    color: rgb(255, 255, 255);
-    // color: hotpink;
-    transition: width 500ms;
-
-    &:hover {
-      cursor: pointer;
-    }
-  }
-}
-
-.la-nav__sidebar {
-  position: absolute;
-  width: 250px;
-  height: 100vh;
-  left: 100vw;
-  top: 0;
-  background-color: rgb(29, 29, 29);
-  z-index: 5;
-  overflow-x: hidden;
-  padding-top: 90px;
-  transition: 500ms;
-  transform: scale(1.4);
-  transform-origin: 0 50%;
-
-  > a {
-    text-transform: uppercase;
-    font-size: 18px;
-    line-height: 1;
+  .la-nav__slides ~ img {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
     display: block;
-    padding: 8px 8px 8px 32px;
-    color: #818181;
+    text-align: center;
+    padding: 280px 0;
+    color: rgb(255, 255, 255);
+    font-size: 17px;
 
-    &:hover {
-      color: #ebebeb;
-      cursor: pointer;
+    p {
+      margin-bottom: 35px;
+      text-transform: uppercase;
+      word-spacing: 2px;
+      letter-spacing: 5px;
+      font-size: 15px;
+      opacity: 0.6;
+      > a:first-child {
+        color: rgba(255, 255, 255, 1);
+      }
     }
 
-    &.la-nav__closebtn {
-      position: absolute;
-      top: 15px;
-      right: 25px;
-      font-size: 30px;
-      cursor: pointer;
+    hr {
+      border: 0.5px solid rgba(255, 255, 255, 0.5);
+      width: 25%;
+    }
+
+    h2 {
+      font-size: 100px;
+      font-weight: 300;
+      letter-spacing: 8px;
+      margin: 0;
     }
   }
 
-  &.la-nav__sidebar--visible {
-    transform: translateX(-250px) scale(1);
+  .la-nav__cover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: block;
+    text-align: center;
+    padding: 280px 0;
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    // z-index: 3;
+
+    p {
+      margin-bottom: 25px;
+      text-transform: uppercase;
+      word-spacing: 2px;
+      letter-spacing: 5px;
+      font-size: 15px;
+      opacity: 0.6;
+      > a:first-child {
+        color: rgba(255, 255, 255, 1);
+      }
+    }
+
+    hr {
+      border: 0.5px solid rgba(255, 255, 255, 0.5);
+      width: 25%;
+    }
+
+    h2 {
+      font-size: 100px;
+      font-weight: 300;
+      letter-spacing: 8px;
+      margin: 0;
+    }
+  }
+
+  .la-nav__slider {
+    position: absolute;
+    right: 0;
+    left: 50%;
+    bottom: 0;
+    z-index: 9;
+    display: inline-block;
+    margin: 20px 4px;
+    cursor: pointer;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    transition: background-color 0.5s ease;
+    background-color: rgba(187, 187, 187, 0.5);
+
+    & ~ span:hover,
+    .active {
+      background-color: rgb(241, 241, 241);
+    }
   }
 }
 
-a ~ hr {
-  border: 0.5px solid rgba(255, 255, 255, 0.3);
-  width: 80%;
-  padding-right: 10px;
-}
+//   a {
+//     // background-image: linear-gradient(
+//     //   rgba(12, 12, 12, 0.7),
+//     //   rgba(12, 12, 12, 0.7),
+//     //   url("/asset/siesta-2.jpg")
+//     // );
+//     // background-size: cover;
+//     // background-position: center;
+//     transition: all ease-out 300ms;
+//   }
+
+// .fade {
+//   -webkit-animation-name: fade;
+//   -webkit-animation-duration: 1.5s;
+//   animation-name: fade;
+//   animation-duration: 1.5s;
+// }
 
 /* ------------- STICKY NAV ------------- */
 // #la-nav a {
 //   color: hotpink;
 // }
-// .la-nav__logo {
+// .la-nav__navbar {
 //   padding: 16px;
 // }
 // .sticky {
@@ -479,10 +435,8 @@ footer {
 }
 
 // /* ------------- RADIO BTNS ------------- */
-
 // .la-nav__radio-container {
 //   text-align: center;
-
 //   & label {
 //     display: inline-block;
 //     position: relative;
@@ -492,7 +446,6 @@ footer {
 //     -moz-user-select: none;
 //     -ms-user-select: none;
 //     // user-select: none;
-
 //     & input {
 //       appearance: none;
 //       position: absolute;
@@ -508,7 +461,6 @@ footer {
 //     }
 //   }
 // }
-
 // label > input:checked {
 //   background-color: rgba(253, 252, 252, 1);
 // }

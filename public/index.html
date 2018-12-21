@@ -30,62 +30,38 @@
     <main>
       <!-- HEADER -->
       <section class="la-nav">
-        <!--
-          <div class="la-nav__background la-nav__background-0"></div>
-          <div class="la-nav__background la-nav__background-1"></div>
-          <div class="la-nav__background la-nav__background-2"></div>
-        -->
+        <header class="la-nav__navbar">
+          <a href="https://templated.co/hielo" target="_blank">
+            Hielo <span>by TEMPLATED</span>
+          </a>
+          <a href="#menu" onclick="openNav()"><span>&#9776;</span> MENU</a>
+        </header>
 
-        <div class="la-nav__slideshow-container">
-          <div class="la-nav__slides fade">
-            <img
-              src="/asset/siesta-2.jpg"
-              class="la-nav__img-cover"
-              style="width:100%"
-              alt="kitty1"
-            />
-          </div>
-          <div class="la-nav__slides fade">
-            <img
-              src="/asset/siesta-3.jpg"
-              class="la-nav__img-cover"
-              style="width:100%"
-              alt="kitty2"
-            />
-          </div>
-
-          <div class="la-nav__slides fade">
-            <img
-              src="/asset/siesta-4.jpg"
-              class="la-nav__img-cover"
-              style="width:100%"
-              alt="kitty3"
-            />
-          </div>
+        <div class="la-nav__sidebar">
+          <a
+            href="javascript:void(0)"
+            onclick="closeNav()"
+            class="la-nav__closebtn"
+            >&times;</a
+          >
+          <a href="generic.html">Home</a>
+          <hr />
+          <a href="generic.html">Generic</a>
+          <hr />
+          <a href="elements.html">Elements</a>
         </div>
 
-        <header>
-          <div class="la-nav__logo">
-            <a href="https://templated.co/hielo" target="_blank"
-              >Hielo <span>by TEMPLATED</span></a
-            >
-            <a href="#menu" onclick="openNav()"><span>&#9776;</span> MENU</a>
-          </div>
+        <div class="la-nav__slides">
+          <img src="/asset/siesta-2.jpg" style="width:100%" />
+        </div>
 
-          <nav class="la-nav__sidebar">
-            <a
-              href="javascript:void(0)"
-              onclick="closeNav()"
-              class="la-nav__closebtn"
-              >&times;</a
-            >
-            <a href="generic.html">Home</a>
-            <hr />
-            <a href="generic.html">Generic</a>
-            <hr />
-            <a href="elements.html">Elements</a>
-          </nav>
-        </header>
+        <div class="la-nav__slides">
+          <img src="/asset/siesta-3.jpg" style="width:100%" />
+        </div>
+
+        <div class="la-nav__slides">
+          <img src="/asset/siesta-4.jpg" style="width:100%" />
+        </div>
 
         <div class="la-nav__cover">
           <p>
@@ -96,29 +72,11 @@
           <h2>Hielo</h2>
         </div>
 
-        <!-- RADIO BUTTONS -->
-        <!--
-          <div class="la-nav__radio-container">
-            <label class="la-nav__radio">
-              <input type="radio" name="radio" checked="checked" />
-              <span class="la-nav__checkmark"></span>
-            </label>
-            <label class="la-nav__radio"
-              ><input type="radio" name="radio" />
-              <span class="la-nav__checkmark"></span>
-            </label>
-            <label class="la-nav__radio"
-              ><input type="radio" name="radio" />
-              <span class="la-nav__checkmark"></span>
-            </label>
-          </div>
-        -->
-        <!-- DOTS -->
-        <div style="text-align:center">
-          <span class="la-nav__checkmark" onclick="currentSlide(1)"></span>
-          <span class="la-nav__checkmark" onclick="currentSlide(2)"></span>
-          <span class="la-nav__checkmark" onclick="currentSlide(3)"></span>
-        </div>
+        <!-- <div> -->
+        <span class="la-nav__slider" onclick="currentSlide(1)"></span>
+        <span class="la-nav__slider" onclick="currentSlide(2)"></span>
+        <span class="la-nav__slider" onclick="currentSlide(3)"></span>
+        <!-- </div> -->
       </section>
 
       <!-- DUAL-COLUMN -->
@@ -257,7 +215,7 @@
 
       function showSlides(n) {
         let slides = document.getElementsByClassName("la-nav__slides");
-        let dots = document.getElementsByClassName("la-nav__checkmark");
+        let dots = document.getElementsByClassName("la-nav__slider");
         if (n > slides.length) {
           slideIndex = 1;
         }
@@ -296,3 +254,21 @@
     </script>
   </body>
 </html>
+
+<!-- RADIO BUTTONS -->
+<!--
+  <div class="la-nav__radio-container">
+    <label class="la-nav__radio">
+      <input type="radio" name="radio" checked="checked" />
+      <span class="la-nav__slider"></span>
+    </label>
+    <label class="la-nav__radio"
+      ><input type="radio" name="radio" />
+      <span class="la-nav__slider"></span>
+    </label>
+    <label class="la-nav__radio"
+      ><input type="radio" name="radio" />
+      <span class="la-nav__slider"></span>
+    </label>
+  </div>
+-->
