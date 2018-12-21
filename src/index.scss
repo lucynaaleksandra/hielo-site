@@ -33,6 +33,7 @@ li {
 
 .la-nav {
   max-width: 100vw;
+  height: 100%;
   position: relative;
 
   header {
@@ -45,7 +46,7 @@ li {
     justify-content: space-between;
     font-size: 19px;
 
-    & a:first-child {
+    a:first-child {
       color: rgb(255, 255, 255);
       padding: 20px;
 
@@ -55,7 +56,7 @@ li {
     }
 
     // menu
-    & a:last-child {
+    a:last-child {
       padding: 20px;
       width: 75px;
       color: rgb(255, 255, 255);
@@ -69,12 +70,13 @@ li {
 
   .la-nav__sidebar {
     position: absolute;
-    width: 250px;
-    height: 100vh;
     left: 100vw;
     top: 0;
-    background-color: rgb(29, 29, 29);
+    bottom: 0;
     z-index: 5;
+    width: 250px;
+    // height: 100%;
+    background-color: rgb(29, 29, 29);
     overflow-x: hidden;
     padding-top: 90px;
     transition: 500ms;
@@ -189,21 +191,26 @@ li {
   }
 
   .la-nav__slider {
+    display: flex;
+    justify-content: center;
     position: absolute;
     right: 0;
-    left: 50%;
+    left: 0;
     bottom: 0;
     z-index: 9;
-    display: inline-block;
-    margin: 20px 4px;
-    cursor: pointer;
-    height: 14px;
-    width: 14px;
-    border-radius: 50%;
-    transition: background-color 0.5s ease;
-    background-color: rgba(187, 187, 187, 0.5);
 
-    & ~ span:hover,
+    > span {
+      // display: inline-block;
+      margin: 20px 4px;
+      cursor: pointer;
+      height: 14px;
+      width: 14px;
+      border-radius: 50%;
+      transition: background-color 0.5s ease;
+      background-color: rgba(187, 187, 187, 0.5);
+    }
+
+    > span:hover,
     .active {
       background-color: rgb(241, 241, 241);
     }
