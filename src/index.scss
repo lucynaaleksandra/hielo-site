@@ -1,4 +1,6 @@
 @import "/css/slider.scss";
+@import "/css/sidebar.scss";
+@import "/css/sticky.scss";
 
 body,
 html {
@@ -31,7 +33,7 @@ li {
   list-style: none;
 }
 
-/* ------------- SECTION - NAV + HEADER ------------- */
+/* ------------- SECTION: NAV + HEADER ------------- */
 .la-nav {
   max-width: 100vw;
   height: 100vh;
@@ -61,58 +63,11 @@ li {
       padding: 20px;
       width: 75px;
       color: rgb(255, 255, 255);
-      transition: width 500ms;
+      transition: width 600ms;
 
       &:hover {
         cursor: pointer;
       }
-    }
-  }
-
-  .la-nav__sidebar {
-    position: absolute;
-    left: 100vw;
-    top: 0;
-    bottom: 0;
-    z-index: 5;
-    width: 250px;
-    background-color: rgb(29, 29, 29);
-    overflow-x: hidden;
-    padding-top: 90px;
-    transition: 500ms;
-    transform: scale(1.4);
-    transform-origin: 0 50%;
-
-    > a {
-      text-transform: uppercase;
-      font-size: 18px;
-      line-height: 1;
-      display: block;
-      padding: 8px 8px 8px 32px;
-      color: #818181;
-
-      & ~ hr {
-        border: 0.5px solid rgba(255, 255, 255, 0.3);
-        width: 80%;
-        padding-right: 10px;
-      }
-
-      &:hover {
-        color: #ebebeb;
-        cursor: pointer;
-      }
-
-      &.la-nav__closebtn {
-        position: absolute;
-        top: 15px;
-        right: 25px;
-        font-size: 30px;
-        cursor: pointer;
-      }
-    }
-
-    &.la-nav__sidebar--visible {
-      transform: translateX(-250px) scale(1);
     }
   }
 
@@ -124,7 +79,7 @@ li {
     height: 100vh;
     display: block;
     text-align: center;
-    padding: 300px 0;
+    padding: 25% 0;
     color: rgb(255, 255, 255);
     font-size: 17px;
     z-index: 3;
@@ -136,6 +91,7 @@ li {
       letter-spacing: 5px;
       font-size: 15px;
       opacity: 0.6;
+
       > a:first-child {
         color: rgba(255, 255, 255, 1);
       }
@@ -154,22 +110,6 @@ li {
     }
   }
 }
-
-/* ------------- STICKY NAV ------------- */
-// #la-nav a {
-//   color: hotpink;
-// }
-// .la-nav__navbar {
-//   padding: 16px;
-// }
-// .sticky {
-//   position: fixed;
-//   top: 0;
-//   width: 100%;
-// }
-// .sticky + .content {
-//   padding-top: 60px;
-// }
 
 /* ------------- DUAL COLUMN ------------- */
 .la-dualcolumn {
