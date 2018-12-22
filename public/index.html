@@ -22,7 +22,6 @@
       href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700"
       rel="stylesheet"
     />
-
     <title>GRID</title>
   </head>
 
@@ -51,18 +50,6 @@
           <a href="elements.html">Elements</a>
         </div>
 
-        <div class="la-nav__slides">
-          <img src="/asset/siesta-2.jpg" style="width:100%" />
-        </div>
-
-        <div class="la-nav__slides">
-          <img src="/asset/siesta-3.jpg" style="width:100%" />
-        </div>
-
-        <div class="la-nav__slides">
-          <img src="/asset/siesta-4.jpg" style="width:100%" />
-        </div>
-
         <div class="la-nav__cover">
           <p>
             A free responsive website template by
@@ -72,10 +59,31 @@
           <h2>Hielo</h2>
         </div>
 
+        <div class="la-nav__slide la-nav__slide-1"></div>
+        <div class="la-nav__slide la-nav__slide-2"></div>
+        <div class="la-nav__slide la-nav__slide-3"></div>
+
         <div class="la-nav__slider">
-          <span onclick="currentSlide(1)"></span>
-          <span onclick="currentSlide(2)"></span>
-          <span onclick="currentSlide(3)"></span>
+          <input
+            type="radio"
+            value="la-nav__slide-1"
+            onclick="currentSlide(1)"
+            checked
+          />
+          <input
+            type="radio"
+            value="la-nav__slide-2"
+            onclick="currentSlide(2)"
+          />
+          <input
+            type="radio"
+            value="la-nav__slide-3"
+            onclick="currentSlide(3)"
+          />
+
+          <div class="la-nav__slider"></div>
+          <div class="la-nav__slider"></div>
+          <div class="la-nav__slider"></div>
         </div>
       </section>
 
@@ -190,85 +198,13 @@
         </footer>
       </div>
     </main>
-
-    <script>
-      // SIDEBAR
-      function openNav() {
-        document
-          .querySelector(".la-nav__sidebar")
-          .classList.add("la-nav__sidebar--visible");
-      }
-
-      function closeNav() {
-        document
-          .querySelector(".la-nav__sidebar")
-          .classList.remove("la-nav__sidebar--visible");
-      }
-
-      // SLIDESHOW
-      let slideIndex = 1;
-      showSlides(slideIndex);
-
-      function currentSlide(n) {
-        showSlides((slideIndex = n));
-      }
-
-      function showSlides(n) {
-        let slides = document.getElementsByClassName("la-nav__slides");
-        let dots = document.getElementsByClassName("la-nav__slider");
-        if (n > slides.length) {
-          slideIndex = 1;
-        }
-
-        if (n < 1) {
-          slideIndex = slides.length;
-        }
-
-        for (let i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-
-        for (let i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
-
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-      }
-
-      // STICKY NAV
-      // window.onscroll = function() {
-      //   myFunction();
-      // };
-
-      // var navbar = document.getElementById("navbar");
-      // var sticky = navbar.offsetTop;
-
-      // function myFunction() {
-      //   if (window.pageYOffset >= sticky) {
-      //     navbar.classList.add("sticky");
-      //   } else {
-      //     navbar.classList.remove("sticky");
-      //   }
-      // }
-    </script>
   </body>
 </html>
-
-<!-- RADIO BUTTONS -->
 <!--
-  <div class="la-nav__radio-container">
-    <label class="la-nav__radio">
-      <input type="radio" name="radio" checked="checked" />
-      <span class="la-nav__slider"></span>
-    </label>
-    <label class="la-nav__radio"
-      ><input type="radio" name="radio" />
-      <span class="la-nav__slider"></span>
-    </label>
-    <label class="la-nav__radio"
-      ><input type="radio" name="radio" />
-      <span class="la-nav__slider"></span>
-    </label>
+  <div class="la-nav__slider">
+    <span data-slider="la-nav__slider-1 active" onclick="currentSlide(1)">
+    </span>
+    <span data-slider="la-nav__slider-2" onclick="currentSlide(2)"></span>
+    <span data-slider="la-nav__slider-3" onclick="currentSlide(3)"></span>
   </div>
 -->

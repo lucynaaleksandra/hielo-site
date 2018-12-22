@@ -1,3 +1,5 @@
+@import "/css/slider.scss";
+
 body,
 html {
   -moz-box-sizing: border-box;
@@ -30,10 +32,9 @@ li {
 }
 
 /* ------------- SECTION - NAV + HEADER ------------- */
-
 .la-nav {
   max-width: 100vw;
-  height: 100%;
+  height: 100vh;
   position: relative;
 
   header {
@@ -75,7 +76,6 @@ li {
     bottom: 0;
     z-index: 5;
     width: 250px;
-    // height: 100%;
     background-color: rgb(29, 29, 29);
     overflow-x: hidden;
     padding-top: 90px;
@@ -116,54 +116,18 @@ li {
     }
   }
 
-  .la-nav__slides ~ img {
-    position: relative;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 0;
-    display: block;
-    text-align: center;
-    padding: 280px 0;
-    color: rgb(255, 255, 255);
-    font-size: 17px;
-
-    p {
-      margin-bottom: 35px;
-      text-transform: uppercase;
-      word-spacing: 2px;
-      letter-spacing: 5px;
-      font-size: 15px;
-      opacity: 0.6;
-      > a:first-child {
-        color: rgba(255, 255, 255, 1);
-      }
-    }
-
-    hr {
-      border: 0.5px solid rgba(255, 255, 255, 0.5);
-      width: 25%;
-    }
-
-    h2 {
-      font-size: 100px;
-      font-weight: 300;
-      letter-spacing: 8px;
-      margin: 0;
-    }
-  }
-
   .la-nav__cover {
     position: absolute;
     top: 0;
     right: 0;
     left: 0;
+    height: 100vh;
     display: block;
     text-align: center;
-    padding: 280px 0;
+    padding: 300px 0;
     color: rgb(255, 255, 255);
     font-size: 17px;
-    // z-index: 3;
+    z-index: 3;
 
     p {
       margin-bottom: 25px;
@@ -189,51 +153,7 @@ li {
       margin: 0;
     }
   }
-
-  .la-nav__slider {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    z-index: 9;
-
-    > span {
-      // display: inline-block;
-      margin: 20px 4px;
-      cursor: pointer;
-      height: 14px;
-      width: 14px;
-      border-radius: 50%;
-      transition: background-color 0.5s ease;
-      background-color: rgba(187, 187, 187, 0.5);
-    }
-
-    > span:hover,
-    .active {
-      background-color: rgb(241, 241, 241);
-    }
-  }
 }
-
-//   a {
-//     // background-image: linear-gradient(
-//     //   rgba(12, 12, 12, 0.7),
-//     //   rgba(12, 12, 12, 0.7),
-//     //   url("/asset/siesta-2.jpg")
-//     // );
-//     // background-size: cover;
-//     // background-position: center;
-//     transition: all ease-out 300ms;
-//   }
-
-// .fade {
-//   -webkit-animation-name: fade;
-//   -webkit-animation-duration: 1.5s;
-//   animation-name: fade;
-//   animation-duration: 1.5s;
-// }
 
 /* ------------- STICKY NAV ------------- */
 // #la-nav a {
@@ -440,34 +360,3 @@ footer {
     }
   }
 }
-
-// /* ------------- RADIO BTNS ------------- */
-// .la-nav__radio-container {
-//   text-align: center;
-//   & label {
-//     display: inline-block;
-//     position: relative;
-//     padding-left: 25px;
-//     margin-bottom: 40px;
-//     -webkit-user-select: none;
-//     -moz-user-select: none;
-//     -ms-user-select: none;
-//     // user-select: none;
-//     & input {
-//       appearance: none;
-//       position: absolute;
-//       top: 0;
-//       left: 0;
-//       height: 12px;
-//       width: 12px;
-//       background-color: rgba(255, 255, 255, 0.3);
-//       border-radius: 50%;
-//       outline: none;
-//       cursor: pointer;
-//       transition: 0.4s;
-//     }
-//   }
-// }
-// label > input:checked {
-//   background-color: rgba(253, 252, 252, 1);
-// }
