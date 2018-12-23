@@ -1,16 +1,12 @@
 /* ------------- STICKY NAV ------------- */
 
-// #la-nav a {
-//   color: hotpink;
-// }
-// .la-nav__navbar {
-//   padding: 16px;
-// }
-// .sticky {
-//   position: fixed;
-//   top: 0;
-//   width: 100%;
-// }
-// .sticky + .content {
-//   padding-top: 60px;
-// }
+#la-nav__navbar,
+.sticky {
+  // overflow: hidden;
+  background-color: rgba(232, 232, 232, 0.2);
+  -webkit-position: fixed;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}

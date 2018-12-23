@@ -29,11 +29,17 @@
     <main>
       <!-- HEADER -->
       <section class="la-nav">
-        <header class="la-nav__navbar">
-          <a href="https://templated.co/hielo" target="_blank">
+        <header id="la-nav__navbar" class="la-nav__navbar">
+          <a
+            href="https://templated.co/hielo"
+            target="_blank"
+            class="la-nav__logo"
+          >
             Hielo <span>by TEMPLATED</span>
           </a>
-          <a href="#menu" onclick="openNav()"><span>&#9776;</span> MENU</a>
+          <a href="#menu" onclick="openNav()" class="la-nav__menu">
+            <span>&#9776;</span> MENU
+          </a>
         </header>
 
         <div class="la-nav__sidebar">
@@ -44,6 +50,7 @@
           >
             &times;
           </a>
+
           <a href="generic.html">Home</a>
           <hr />
           <a href="generic.html">Generic</a>
@@ -96,7 +103,7 @@
       </section>
 
       <!-- DUAL-COLUMN -->
-      <div class="content">
+      <div>
         <section class="la-dualcolumn">
           <div>
             <div class="la-dualcolumn__image">

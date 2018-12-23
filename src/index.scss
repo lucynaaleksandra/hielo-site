@@ -54,7 +54,8 @@ li {
       padding: 20px;
 
       span {
-        color: rgba(255, 255, 255, 0.5);
+        color: hotpink;
+        // color: rgba(255, 255, 255, 0.5);
       }
     }
 
@@ -62,7 +63,8 @@ li {
     a:last-child {
       padding: 20px;
       width: 75px;
-      color: rgb(255, 255, 255);
+      // color: rgb(255, 255, 255);
+      color: hotpink;
       transition: width 600ms;
 
       &:hover {

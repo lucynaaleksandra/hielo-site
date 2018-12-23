@@ -45,12 +45,12 @@ function showSlides(n) {
   dots[slideIndex - 1].className += " active";
 }
 
-// STICKY NAV
+// // STICKY NAV
 // window.onscroll = function() {
 //   myFunction();
 // };
 
-// var navbar = document.getElementById("navbar");
+// var navbar = document.querySelector("#la-nav__navbar");
 // var sticky = navbar.offsetTop;
 
 // function myFunction() {
@@ -59,4 +59,5 @@ function showSlides(n) {
 //   } else {
 //     navbar.classList.remove("sticky");
 //   }
+//   console.log("sticky:: ", sticky);
 // }
