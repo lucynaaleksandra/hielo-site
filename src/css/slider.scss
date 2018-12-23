@@ -7,9 +7,9 @@
   z-index: 0;
   padding: 280px 0;
   color: rgb(255, 255, 255);
-  transition: all 600ms ease-out;
   background-size: cover;
   background-position: center;
+  transition: all 1000ms ease-out;
 }
 
 .la-nav__slider {
@@ -24,9 +24,9 @@
   > input {
     appearance: none;
     -webkit-appearance: none;
-    margin: 20px 4px;
-    height: 14px;
-    width: 14px;
+    margin: 30px 10px;
+    height: 15px;
+    width: 15px;
     border-radius: 50%;
     outline: none;
     background-color: rgba(187, 187, 187, 0.5);
@@ -60,4 +60,36 @@
       rgba(12, 12, 12, 0.7)
     ),
     url("/asset/siesta-3.jpg");
+}
+.la-nav__slide-4 {
+  background-image: linear-gradient(
+      rgba(12, 12, 12, 0.7),
+      rgba(12, 12, 12, 0.7)
+    ),
+    url("/asset/siesta-4.jpg");
+}
+
+.la-nav--fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1300ms;
+  animation-name: fade;
+  animation-duration: 1300ms;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
 }
