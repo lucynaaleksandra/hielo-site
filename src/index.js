@@ -45,7 +45,7 @@ function showSlides(n) {
   dots[slideIndex - 1].className += " active";
 }
 
-// // STICKY NAV
+// STICKY NAV
 // window.onscroll = function() {
 //   myFunction();
 // };
@@ -61,3 +61,19 @@ function showSlides(n) {
 //   }
 //   console.log("sticky:: ", sticky);
 // }
+
+// $(document).ready(function() {
+//   // STICKY NAVIGATION
+//   $(".la-dualcolumn--sticky").waypoint(
+//     function(direction) {
+//       if (direction === "down") {
+//         $("#la-nav__navbar").addClass("sticky");
+//       } else {
+//         $("#la-nav__navbar").removeClass("sticky");
+//       }
+//     },
+//     {
+//       offset: "60px;"
+//     }
+//   );
+// });

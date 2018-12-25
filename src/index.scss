@@ -1,6 +1,7 @@
 @import "/css/slider.scss";
 @import "/css/sidebar.scss";
 @import "/css/sticky.scss";
+@import "/css/media-queries.scss";
 
 body,
 html {
@@ -54,8 +55,8 @@ li {
       padding: 20px;
 
       span {
-        color: hotpink;
-        // color: rgba(255, 255, 255, 0.5);
+        // color: hotpink;
+        color: rgba(255, 255, 255, 0.5);
       }
     }
 
@@ -63,8 +64,8 @@ li {
     a:last-child {
       padding: 20px;
       width: 75px;
-      // color: rgb(255, 255, 255);
-      color: hotpink;
+      // color: hotpink;
+      color: rgb(255, 255, 255);
       transition: width 600ms;
 
       &:hover {
