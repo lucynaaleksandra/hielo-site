@@ -1,45 +1,22 @@
-// $breakpoint argument choices:
-// -	phone
-// -	tab-port
-// -	port-land
-// -	big-desktop
-
-@mixin respond($breakpoint) {
-  @if $breakpoinnt == phone {
-    @media (max-width: 600px) {
-      @content;
-    }
-  }
-  @if $breakpoinnt == tab-port {
-    @media (max-width: 900px) {
-      @content;
-    }
-  }
-  @if $breakpoinnt == tab-land {
-    @media (max-width: 1200px) {
-      @content;
-    }
-  }
-  @if $breakpoinnt == big-desktop {
-    @media (max-width: 1800px) {
-      @content;
-    }
-  }
-}
+// // $breakpoint argument choices:
+// // -	phone
+// // -	tab-port
+// // -	port-land
+// // -	big-desktop
 
 // @mixin respond($breakpoint) {
 //   @if $breakpoinnt == phone {
-//     @media (max-width: 600px) {
+//     @media (max-width: 480px) {
 //       @content;
 //     }
 //   }
 //   @if $breakpoinnt == tab-port {
-//     @media (max-width: 900px) {
+//     @media (max-width: 768px) {
 //       @content;
 //     }
 //   }
 //   @if $breakpoinnt == tab-land {
-//     @media (max-width: 1200px) {
+//     @media (max-width: 1024px) {
 //       @content;
 //     }
 //   }
