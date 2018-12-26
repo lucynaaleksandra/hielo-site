@@ -55,7 +55,6 @@ li {
       padding: 20px;
 
       span {
-        // color: hotpink;
         color: rgba(255, 255, 255, 0.5);
       }
     }
@@ -64,13 +63,17 @@ li {
     a:last-child {
       padding: 20px;
       width: 75px;
-      // color: hotpink;
       color: rgb(255, 255, 255);
       transition: width 600ms;
 
       &:hover {
         cursor: pointer;
       }
+    }
+
+    @media only screen and (min-width: 320px) and (max-width: 480px) {
+      font-size: 90%;
+      // padding: 5px;
     }
   }
 
@@ -87,6 +90,10 @@ li {
     font-size: 17px;
     z-index: 3;
 
+    @media only screen and (min-width: 320px) and (max-width: 480px) {
+      padding: 50% 0;
+    }
+
     p {
       margin-bottom: 25px;
       text-transform: uppercase;
@@ -94,6 +101,10 @@ li {
       letter-spacing: 5px;
       font-size: 15px;
       opacity: 0.6;
+
+      @media only screen and (min-width: 320px) and (max-width: 480px) {
+        font-size: 70%;
+      }
 
       > a:first-child {
         color: rgba(255, 255, 255, 1);
@@ -110,6 +121,10 @@ li {
       font-weight: 300;
       letter-spacing: 8px;
       margin: 0;
+
+      @media only screen and (min-width: 320px) and (max-width: 480px) {
+        font-size: 70px;
+      }
     }
   }
 }
@@ -125,6 +140,12 @@ li {
   grid-gap: 6%;
   padding: 8%;
   color: rgb(63, 63, 63);
+
+  @media only screen and (min-width: 320px) and (max-width: 480px) {
+    grid-template-columns: 1fr;
+    grid-gap: 1%;
+    padding: 8% 3%;
+  }
 
   > div {
     text-align: center;
@@ -214,6 +235,10 @@ li {
       letter-spacing: 4px;
       font-size: 10px;
       opacity: 0.6;
+
+      @media only screen and (min-width: 320px) and (max-width: 480px) {
+        font-size: 8px;
+      }
     }
     hr {
       border: 0.5px solid rgba(255, 255, 255, 0.5);
@@ -225,6 +250,10 @@ li {
       letter-spacing: 2px;
       word-spacing: 3px;
       margin: 0;
+
+      @media only screen and (min-width: 320px) and (max-width: 480px) {
+        font-size: 20px;
+      }
     }
   }
 }
@@ -249,6 +278,10 @@ li {
       letter-spacing: 4px;
       font-size: 10px;
       opacity: 0.6;
+
+      @media only screen and (min-width: 320px) and (max-width: 480px) {
+        font-size: 8px;
+      }
     }
     hr {
       border: 0.5px solid rgba(153, 152, 152, 0.5);
@@ -260,6 +293,10 @@ li {
       letter-spacing: 2px;
       word-spacing: 3px;
       margin: 0;
+
+      @media only screen and (min-width: 320px) and (max-width: 480px) {
+        font-size: 20px;
+      }
     }
   }
 
@@ -272,9 +309,19 @@ li {
     background-color: rgb(242, 242, 242);
     padding: 3% 10% 10% 10%;
 
+    @media only screen and (min-width: 320px) and (max-width: 480px) {
+      grid-template-columns: 1fr;
+      grid-gap: 1%;
+    }
+
     div img {
       width: 100%;
       border: 15px solid rgb(255, 255, 255);
+
+      @media only screen and (min-width: 320px) and (max-width: 480px) {
+        width: 90%;
+        border: 10px solid rgb(255, 255, 255);
+      }
     }
   }
 }
@@ -289,6 +336,10 @@ footer {
   background-color: rgb(24, 24, 23);
   overflow: hidden;
 
+  @media only screen and (min-width: 320px) and (max-width: 480px) {
+    font-size: 10px;
+  }
+
   ul {
     padding: 0;
   }
@@ -300,6 +351,10 @@ footer {
     i {
       color: rgba(255, 249, 241, 0.7);
       font-size: 25px;
+
+      @media only screen and (min-width: 320px) and (max-width: 480px) {
+        font-size: 20px;
+      }
     }
   }
 }
