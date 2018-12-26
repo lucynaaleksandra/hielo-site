@@ -26,6 +26,7 @@ h6 {
 
 a {
   text-decoration: none;
+  color: rgb(174, 174, 174);
 }
 
 ol,
@@ -161,6 +162,8 @@ li {
 
   > div {
     text-align: center;
+    display: flex;
+    flex-direction: column;
 
     &:nth-child(1) {
       background-color: rgb(255, 255, 255);
@@ -177,7 +180,10 @@ li {
     }
 
     .la-dualcolumn__content {
-      padding: 20px;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
 
       > div {
         p {
@@ -214,7 +220,7 @@ li {
 
       > p {
         font-size: 14px;
-        color: rgb(174, 174, 174);
+        color: #aeaeae;
         font-weight: 300;
         padding-bottom: 30px;
 
@@ -227,17 +233,16 @@ li {
       }
 
       button {
-        padding: 10px;
-        margin-bottom: 20px;
+        padding: 15px;
+        background-color: rgb(255, 255, 255);
         font-size: 16px;
         text-transform: uppercase;
-        border: 2px solid lightgrey;
+        border: 2px solid rgb(211, 211, 211);
         border-radius: 3px;
         outline: none;
-
-        a {
-          color: rgb(114, 114, 114);
-        }
+        // margin-bottom: 30px;
+        margin-top: auto;
+        align-self: center;
 
         @media only screen and (min-width: 320px) and (max-width: 480px) {
           font-size: 12px;
@@ -246,7 +251,6 @@ li {
         @media only screen and (min-width: 480px) and (max-width: 768px) {
           font-size: 13px;
           padding: 7px;
-          align-self: end;
         }
       }
     }
