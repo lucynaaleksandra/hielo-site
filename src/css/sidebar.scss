@@ -14,9 +14,13 @@
 
   @media only screen and (min-width: 320px) and (max-width: 480px) {
     width: 170px;
-    // left: 100vw;
     bottom: 0;
     padding-top: 50px;
+    transform: scale(1.2);
+  }
+  @media only screen and (min-width: 480px) and (max-width: 768px) {
+    width: 190px;
+    padding-top: 80px;
     transform: scale(1.2);
   }
 
@@ -32,6 +36,11 @@
       font-size: 13px;
       line-height: 0.5;
       padding: 5px 5px 5px 25px;
+    }
+    @media only screen and (min-width: 480px) and (max-width: 768px) {
+      font-size: 15px;
+      line-height: 0.8;
+      padding: 7px 7px 7px 30px;
     }
 
     & ~ hr {
@@ -55,6 +64,9 @@
       @media only screen and (min-width: 320px) and (max-width: 480px) {
         font-size: 25px;
       }
+      @media only screen and (min-width: 480px) and (max-width: 768px) {
+        font-size: 23px;
+      }
     }
   }
 
@@ -63,6 +75,9 @@
 
     @media only screen and (min-width: 320px) and (max-width: 480px) {
       transform: translateX(-160px) scale(1);
+    }
+    @media only screen and (min-width: 480px) and (max-width: 768px) {
+      transform: translateX(-190px) scale(1);
     }
   }
 }

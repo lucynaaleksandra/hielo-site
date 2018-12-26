@@ -50,6 +50,13 @@ li {
     justify-content: space-between;
     font-size: 19px;
 
+    @media only screen and (min-width: 320px) and (max-width: 480px) {
+      font-size: 80%;
+    }
+    @media only screen and (min-width: 480px) and (max-width: 768px) {
+      font-size: 90%;
+    }
+
     a:first-child {
       color: rgb(255, 255, 255);
       padding: 20px;
@@ -70,11 +77,6 @@ li {
         cursor: pointer;
       }
     }
-
-    @media only screen and (min-width: 320px) and (max-width: 480px) {
-      font-size: 90%;
-      // padding: 5px;
-    }
   }
 
   .la-nav__cover {
@@ -91,7 +93,7 @@ li {
     z-index: 3;
 
     @media only screen and (min-width: 320px) and (max-width: 480px) {
-      padding: 50% 0;
+      padding: 45% 0;
     }
 
     p {
@@ -103,7 +105,10 @@ li {
       opacity: 0.6;
 
       @media only screen and (min-width: 320px) and (max-width: 480px) {
-        font-size: 70%;
+        font-size: 11px;
+      }
+      @media only screen and (min-width: 480px) and (max-width: 768px) {
+        font-size: 13px;
       }
 
       > a:first-child {
@@ -125,6 +130,9 @@ li {
       @media only screen and (min-width: 320px) and (max-width: 480px) {
         font-size: 70px;
       }
+      @media only screen and (min-width: 480px) and (max-width: 768px) {
+        font-size: 85px;
+      }
     }
   }
 }
@@ -145,6 +153,10 @@ li {
     grid-template-columns: 1fr;
     grid-gap: 1%;
     padding: 8% 3%;
+  }
+  @media only screen and (min-width: 480px) and (max-width: 768px) {
+    grid-gap: 4%;
+    padding: 10% 5%;
   }
 
   > div {
@@ -174,7 +186,15 @@ li {
           color: rgb(174, 174, 174);
           letter-spacing: 3px;
           word-spacing: 1px;
+
+          @media only screen and (min-width: 320px) and (max-width: 480px) {
+            font-size: 9px;
+          }
+          @media only screen and (min-width: 480px) and (max-width: 768px) {
+            font-size: 10px;
+          }
         }
+
         hr {
           border: 0.5px solid rgba(153, 152, 152, 0.5);
           width: 50%;
@@ -182,6 +202,13 @@ li {
         h2 {
           font-weight: 400;
           padding-bottom: 25px;
+
+          @media only screen and (min-width: 320px) and (max-width: 480px) {
+            font-weight: 300;
+          }
+          @media only screen and (min-width: 480px) and (max-width: 768px) {
+            font-weight: 300;
+          }
         }
       }
 
@@ -190,6 +217,13 @@ li {
         color: rgb(174, 174, 174);
         font-weight: 300;
         padding-bottom: 30px;
+
+        @media only screen and (min-width: 320px) and (max-width: 480px) {
+          font-size: 11px;
+        }
+        @media only screen and (min-width: 480px) and (max-width: 768px) {
+          font-size: 12px;
+        }
       }
 
       button {
@@ -203,6 +237,16 @@ li {
 
         a {
           color: rgb(114, 114, 114);
+        }
+
+        @media only screen and (min-width: 320px) and (max-width: 480px) {
+          font-size: 12px;
+          padding: 6px;
+        }
+        @media only screen and (min-width: 480px) and (max-width: 768px) {
+          font-size: 13px;
+          padding: 7px;
+          align-self: end;
         }
       }
     }
@@ -322,6 +366,9 @@ li {
         width: 90%;
         border: 10px solid rgb(255, 255, 255);
       }
+      @media only screen and (min-width: 480px) and (max-width: 768px) {
+        border: 13px solid rgb(255, 255, 255);
+      }
     }
   }
 }
@@ -339,6 +386,10 @@ footer {
   @media only screen and (min-width: 320px) and (max-width: 480px) {
     font-size: 10px;
   }
+  @media only screen and (min-width: 480px) and (max-width: 768px) {
+    font-size: 11px;
+    padding-bottom: 30px;
+  }
 
   ul {
     padding: 0;
@@ -354,6 +405,9 @@ footer {
 
       @media only screen and (min-width: 320px) and (max-width: 480px) {
         font-size: 20px;
+      }
+      @media only screen and (min-width: 480px) and (max-width: 768px) {
+        font-size: 21px;
       }
     }
   }
