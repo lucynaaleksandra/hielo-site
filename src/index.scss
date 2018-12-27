@@ -1,7 +1,4 @@
-@import "/css/slider.scss";
-@import "/css/sidebar.scss";
-@import "/css/sticky.scss";
-@import "/css/media-queries.scss";
+@import "/css/index.scss";
 
 body,
 html {
@@ -99,9 +96,9 @@ li {
     @media only screen and (min-width: 480px) and (max-width: 768px) {
       padding: 55% 0;
     }
-    @media only screen and (min-width: 768px) and (max-width: 1024px) {
-      padding: 35% 0;
-    }
+    // @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    //   padding: 35% 0;
+    // }
 
     p {
       margin-bottom: 25px;
