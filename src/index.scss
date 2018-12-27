@@ -49,10 +49,14 @@ li {
     font-size: 19px;
 
     @media only screen and (min-width: 320px) and (max-width: 480px) {
-      font-size: 80%;
+      font-size: 13px;
     }
     @media only screen and (min-width: 480px) and (max-width: 768px) {
-      font-size: 90%;
+      font-size: 14px;
+    }
+    @media only screen and (min-width: 1824px) {
+      font-size: 20px;
+      padding: 10px;
     }
 
     a:first-child {
@@ -74,6 +78,10 @@ li {
       &:hover {
         cursor: pointer;
       }
+
+      @media only screen and (min-width: 1824px) {
+        width: 130px;
+      }
     }
   }
 
@@ -83,22 +91,14 @@ li {
     right: 0;
     left: 0;
     height: 100vh;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
-    padding: 25% 0;
+    // display: block;
     color: rgb(255, 255, 255);
     font-size: 17px;
     z-index: 3;
-
-    @media only screen and (min-width: 320px) and (max-width: 480px) {
-      padding: 65% 0;
-    }
-    @media only screen and (min-width: 480px) and (max-width: 768px) {
-      padding: 55% 0;
-    }
-    // @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    //   padding: 35% 0;
-    // }
 
     p {
       margin-bottom: 25px;
@@ -114,6 +114,10 @@ li {
       }
       @media only screen and (min-width: 480px) and (max-width: 768px) {
         font-size: 13px;
+        padding: 20px 50px;
+      }
+      @media only screen and (min-width: 1824px) {
+        font-size: 18px;
       }
 
       > a:first-child {
@@ -138,6 +142,9 @@ li {
       @media only screen and (min-width: 480px) and (max-width: 768px) {
         font-size: 85px;
       }
+      @media only screen and (min-width: 1824px) {
+        font-size: 110px;
+      }
     }
   }
 }
@@ -150,18 +157,18 @@ li {
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 6%;
-  padding: 8%;
+  grid-gap: 50px;
+  padding: 90px;
   color: rgb(63, 63, 63);
 
   @media only screen and (min-width: 320px) and (max-width: 480px) {
     grid-template-columns: 1fr;
-    grid-gap: 1%;
-    padding: 8% 3%;
+    grid-gap: 10px;
+    padding: 30px 18px;
   }
   @media only screen and (min-width: 480px) and (max-width: 768px) {
-    grid-gap: 4%;
-    padding: 10% 5%;
+    grid-gap: 20px;
+    padding: 60px 20px;
   }
 
   > div {
@@ -178,8 +185,16 @@ li {
     }
 
     .la-dualcolumn__image {
+      overflow: hidden;
+
       img {
         width: 100%;
+        display: block;
+
+        // &:hover {
+        //   transition: 500ms;
+        //   transform: scale(1.1);
+        // }
       }
     }
 
@@ -334,6 +349,7 @@ li {
 
       @media only screen and (min-width: 320px) and (max-width: 480px) {
         font-size: 8px;
+        padding: 20px;
       }
     }
     hr {
@@ -357,7 +373,7 @@ li {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-gap: 8%;
+    grid-gap: 50px;
 
     background-color: rgb(242, 242, 242);
     padding: 3% 10% 10% 10%;
@@ -367,16 +383,21 @@ li {
       grid-gap: 1%;
     }
 
-    div img {
-      width: 100%;
-      border: 15px solid rgb(255, 255, 255);
+    a {
+      display: block;
 
-      @media only screen and (min-width: 320px) and (max-width: 480px) {
-        width: 90%;
-        border: 10px solid rgb(255, 255, 255);
-      }
-      @media only screen and (min-width: 480px) and (max-width: 768px) {
-        border: 13px solid rgb(255, 255, 255);
+      img {
+        box-sizing: border-box;
+        width: 100%;
+        border: 15px solid rgb(255, 255, 255);
+
+        @media only screen and (min-width: 320px) and (max-width: 480px) {
+          width: 90%;
+          border: 10px solid rgb(255, 255, 255);
+        }
+        @media only screen and (min-width: 480px) and (max-width: 768px) {
+          border: 13px solid rgb(255, 255, 255);
+        }
       }
     }
   }
