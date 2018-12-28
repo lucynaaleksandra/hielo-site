@@ -1,2 +1,88 @@
-$easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-$easeOutCirc: cubic-bezier(0.075, 0.82, 0.165, 1);
+/* ----- MEDIA QUERIES ----- */
+
+@mixin mq($break) {
+  @if $break == "x-small" {
+    @media (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm) {
+      @content;
+    }
+  } @else if $break == "small" {
+    @media (min-width: $breakpoint-sm + 1) {
+      @content;
+    }
+  } @else if $break == "medium" {
+    @media (min-width: $breakpoint-md) {
+      @content;
+    }
+  } @else if $break == "large" {
+    @media (min-width: $breakpoint-lg) {
+      @content;
+    }
+  } @else if $break == "x-large" {
+    @media (min-width: $breakpoint-xl) {
+      @content;
+    }
+  } @else {
+    @error "Woops! No value could be retrieved for `#{$break}`.";
+  }
+}
+
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+@mixin create-fade-up-keyframes($animationName, $opacity: 1) {
+  @keyframes #{$animationName} {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: $opacity;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* ----- ANIMATION KEYFRAMES ----- */
+
+@include keyframes(fade) {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes enter-scale-x {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes enter-fade-down {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@include create-fade-up-keyframes("enter-fade-up-1", 0.6);

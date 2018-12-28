@@ -51,15 +51,14 @@ li {
     justify-content: space-between;
     font-size: 19px;
 
-    @media only screen and (min-width: 320px) and (max-width: 480px) {
+    @include mq(x-small) {
       font-size: 13px;
     }
-    @media only screen and (min-width: 480px) and (max-width: 768px) {
+    @include mq(small) {
       font-size: 14px;
     }
-    @media only screen and (min-width: 1824px) {
-      font-size: 20px;
-      padding: 10px;
+    @include mq(medium) {
+      font-size: 17px;
     }
 
     a:first-child {
@@ -91,15 +90,10 @@ li {
         transition: 500ms ease-out;
         transform: scale(1.03);
       }
-
-      @media only screen and (min-width: 1824px) {
-        width: 130px;
-      }
     }
   }
 
   .la-nav__cover {
-    @extend %centered;
     position: absolute;
     top: 0;
     right: 0;
@@ -108,46 +102,41 @@ li {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
     color: $white;
     font-size: 17px;
     z-index: 3;
 
     p {
-      margin-bottom: 25px;
+      margin-bottom: 0;
       text-transform: uppercase;
       word-spacing: 2px;
       letter-spacing: 5px;
       font-size: 15px;
-      opacity: 0.6;
 
-      @media only screen and (min-width: 320px) and (max-width: 480px) {
+      opacity: 0;
+      animation: enter-fade-up-1 2000ms $easeOutCirc 800ms normal forwards;
+
+      @include mq(x-small) {
         font-size: 11px;
         padding: 30px;
       }
-      @media only screen and (min-width: 480px) and (max-width: 768px) {
+      @include mq(small) {
         font-size: 13px;
         padding: 20px 50px;
       }
-      @media only screen and (min-width: 1824px) {
+      @include mq(large) {
         font-size: 18px;
+        font-weight: 200;
       }
-
-      > a {
-        color: rgba(255, 255, 255, 0.9);
-        transition: 500ms ease-in-out;
-        transform: scale(1);
-      }
-    }
-
-    p > a:hover {
-      opacity: 1;
-      transition: 500ms ease-in-out;
-      transform: scale(1.02);
     }
 
     hr {
       border: 0.5px solid $color-shadow-light;
       width: 25%;
+      transform: scaleX(0);
+
+      animation: enter-scale-x 1500ms $easeOutCirc 500ms normal forwards;
     }
 
     h2 {
@@ -155,14 +144,20 @@ li {
       font-weight: 200;
       letter-spacing: 8px;
       margin: 0;
+      opacity: 0;
 
-      @media only screen and (min-width: 320px) and (max-width: 480px) {
+      animation: enter-fade-down 2000ms $easeOutCirc 800ms normal forwards;
+
+      @include mq(x-small) {
         font-size: 70px;
       }
-      @media only screen and (min-width: 480px) and (max-width: 768px) {
+      @include mq(small) {
+        font-size: 75px;
+      }
+      @include mq(medium) {
         font-size: 85px;
       }
-      @media only screen and (min-width: 1824px) {
+      @include mq(large) {
         font-size: 110px;
       }
     }
@@ -181,20 +176,30 @@ li {
   padding: 90px;
   color: $dark-grey;
 
-  @media only screen and (min-width: 320px) and (max-width: 480px) {
+  @include mq(x-small) {
     grid-template-columns: 1fr;
     grid-gap: 10px;
     padding: 30px 18px;
   }
-  @media only screen and (min-width: 480px) and (max-width: 768px) {
-    grid-gap: 20px;
-    padding: 60px 20px;
+  @include mq(small) {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    padding: 30px 18px;
+  }
+  @include mq(medium) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 35px;
+    padding: 30px 18px;
+  }
+  @include mq(large) {
+    grid-gap: 50px;
+    padding: 90px;
   }
 
   > .la-dualcolumn {
-    @extend %centered;
     display: flex;
     flex-direction: column;
+    text-align: center;
 
     &:nth-child(1),
     &:nth-child(2) {
@@ -252,11 +257,11 @@ li {
           letter-spacing: 3px;
           word-spacing: 1px;
 
-          @media only screen and (min-width: 320px) and (max-width: 480px) {
+          @include mq(x-small) {
             font-size: 9px;
           }
-          @media only screen and (min-width: 480px) and (max-width: 768px) {
-            font-size: 10px;
+          @include mq(small) {
+            font-size: 11px;
           }
         }
 
@@ -275,11 +280,14 @@ li {
         color: $light-med-grey;
         padding-bottom: 30px;
 
-        @media only screen and (min-width: 320px) and (max-width: 480px) {
+        @include mq(x-small) {
           font-size: 11px;
         }
-        @media only screen and (min-width: 480px) and (max-width: 768px) {
+        @include mq(small) {
           font-size: 12px;
+        }
+        @include mq(medium) {
+          font-size: 14px;
         }
       }
 
@@ -302,12 +310,12 @@ li {
           transition: 800ms;
         }
 
-        @media only screen and (min-width: 320px) and (max-width: 480px) {
+        @include mq(x-small) {
           font-size: 12px;
           padding: 6px;
         }
-        @media only screen and (min-width: 480px) and (max-width: 768px) {
-          font-size: 13px;
+        @include mq(small) {
+          font-size: 14px;
           padding: 7px;
         }
       }
@@ -325,12 +333,12 @@ li {
   min-height: 20vh;
 
   .la-banner__headings {
-    @extend %centered;
     display: block;
     position: relative;
     padding: 100px 0;
     color: $white;
     font-size: 17px;
+    text-align: center;
 
     p {
       margin-bottom: 15px;
@@ -339,15 +347,25 @@ li {
       font-size: 12px;
       opacity: 0.6;
 
-      @media only screen and (min-width: 320px) and (max-width: 480px) {
+      @include mq(x-small) {
         font-size: 8px;
         padding: 20px;
       }
+      @include mq(small) {
+        font-size: 10px;
+        padding: 0 40px;
+      }
+      @include mq(medium) {
+        font-size: 13px;
+        font-weight: 200;
+      }
     }
+
     hr {
       border: 0.5px solid $color-shadow-light;
       width: 25%;
     }
+
     h2 {
       font-size: 25px;
       font-weight: 200;
@@ -355,8 +373,14 @@ li {
       word-spacing: 3px;
       margin: 0;
 
-      @media only screen and (min-width: 320px) and (max-width: 480px) {
+      @include mq(x-small) {
+        font-size: 18px;
+      }
+      @include mq(small) {
         font-size: 20px;
+      }
+      @include mq(large) {
+        font-size: 24px;
       }
     }
   }
@@ -369,9 +393,9 @@ li {
 }
 
 .la-fourgrid__content {
-  @extend %centered;
   background-color: $x-light-grey;
   padding-top: 40px;
+  text-align: center;
 
   > div {
     p {
@@ -381,24 +405,39 @@ li {
       font-size: 10px;
       opacity: 0.6;
 
-      @media only screen and (min-width: 320px) and (max-width: 480px) {
+      @include mq(x-small) {
         font-size: 8px;
-        padding: 10px;
+        padding: 12px;
+      }
+      @include mq(small) {
+        font-size: 9px;
+        padding: 0 15px;
+      }
+      @include mq(medium) {
+        font-size: 10px;
       }
     }
+
     hr {
       border: 0.5px solid rgba(153, 152, 152, 0.5);
       width: 40%;
     }
+
     h2 {
-      font-size: 25px;
+      // font-size: 34px;
       font-weight: 300;
       letter-spacing: 2px;
       word-spacing: 3px;
       margin: 0;
 
-      @media only screen and (min-width: 320px) and (max-width: 480px) {
-        font-size: 20px;
+      @include mq(x-small) {
+        font-size: 22px;
+      }
+      @include mq(small) {
+        font-size: 24px;
+      }
+      @include mq(medium) {
+        font-size: 28px;
       }
     }
   }
@@ -410,27 +449,36 @@ li {
     grid-gap: 50px;
     padding: 50px 130px 150px 130px;
 
-    @media only screen and (min-width: 320px) and (max-width: 480px) {
+    @include mq(x-small) {
       grid-template-columns: 1fr;
       padding: 30px 20px 40px 20px;
       grid-gap: 12px;
     }
-
-    @media only screen and (min-width: 480px) and (max-width: 768px) {
+    @include mq(small) {
       padding: 20px 30px 30px 30px;
       grid-gap: 15px;
     }
+    @include mq(medium) {
+      padding: 20px 50px 50px 50px;
+      grid-gap: 25px;
+    }
+    @include mq(large) {
+      padding: 50px 100px 100px 100px;
+      grid-gap: 40px;
+    }
 
     a {
-      border: 15px solid $white;
+      border: 20px solid $white;
       overflow: hidden;
 
-      @media only screen and (min-width: 320px) and (max-width: 480px) {
+      @include mq(x-small) {
         border-width: 12px;
       }
-
-      @media only screen and (min-width: 480px) and (max-width: 768px) {
-        border-width: 12px;
+      @include mq(small) {
+        border-width: 14px;
+      }
+      @include mq(medium) {
+        border-width: 20px;
       }
 
       img {
@@ -453,18 +501,18 @@ li {
 
 /* ------------- FOOTER ------------- */
 footer {
-  @extend %centered;
   display: block;
   font-size: 13px;
   padding-bottom: 40px;
+  text-align: center;
   color: rgba($x-light-grey, 0.8);
   background-color: $x-dark-grey;
   overflow: hidden;
 
-  @media only screen and (min-width: 320px) and (max-width: 480px) {
+  @include mq(x-small) {
     font-size: 10px;
   }
-  @media only screen and (min-width: 480px) and (max-width: 768px) {
+  @include mq(small) {
     font-size: 11px;
     padding-bottom: 30px;
   }
@@ -474,9 +522,9 @@ footer {
   }
 
   ul li {
-    @extend %centered;
     display: inline-block;
     padding: 40px 15px 0 15px;
+    text-align: center;
 
     a {
       display: block;
@@ -490,12 +538,16 @@ footer {
       i {
         color: rgba($x-light-grey, 0.8);
         font-size: 25px;
+        padding-bottom: 10px;
 
-        @media only screen and (min-width: 320px) and (max-width: 480px) {
+        @include mq(x-small) {
           font-size: 20px;
         }
-        @media only screen and (min-width: 480px) and (max-width: 768px) {
-          font-size: 21px;
+        @include mq(small) {
+          font-size: 22px;
+        }
+        @include mq(medium) {
+          font-size: 25px;
         }
       }
     }

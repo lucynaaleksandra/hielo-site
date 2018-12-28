@@ -1,5 +1,4 @@
 // Descriptive color variables
-
 $white: rgb(255, 255, 255);
 $x-light-grey: rgb(245, 245, 245);
 $light-grey: rgb(228, 228, 228);
@@ -14,10 +13,17 @@ $color-shadow-light: rgba($white, 0.5);
 $color-shadow-med: rgba($light-med-grey, 0.5);
 $color-shadow-black: rgba($black, 0.6);
 
-// $color-primary
-// $color-secondary
-// $color-text-light: $white;
-// $color-text-medium: $light-grey;
-// $color-shadow: rgba($black, .8);
+// Media query breakpoints
+$break-narrow: "(max-width: 768px)";
+$break-wide: "(max-width: 1024px)";
 
-// Font stack
+// Breakpoints
+$breakpoint-xs: 1px;
+$breakpoint-sm: 480px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1100px;
+$breakpoint-xl: 1800px;
+
+// Transitions
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$easeOutCirc: cubic-bezier(0.075, 0.82, 0.165, 1);

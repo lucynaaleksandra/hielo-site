@@ -9,7 +9,6 @@
   color: $white;
   background-size: cover;
   background-position: center;
-  transition: all 1000ms ease-out;
 }
 
 .la-nav__slider {
@@ -33,17 +32,17 @@
     cursor: pointer;
     transition: background-color 600ms ease;
 
-    @media only screen and (min-width: 320px) and (max-width: 480px) {
+    @include mq(x-small) {
       height: 12px;
       width: 12px;
     }
-    @media only screen and (min-width: 480px) and (max-width: 768px) {
-      height: 13px;
-      width: 13px;
+    @include mq(small) {
+      height: 14px;
+      width: 14px;
     }
-    @media only screen and (min-width: 1824px) {
-      height: 19px;
-      width: 19px;
+    @include mq(medium) {
+      height: 16px;
+      width: 16px;
     }
   }
 
@@ -71,22 +70,4 @@
   -webkit-animation-duration: 1300ms;
   animation-name: fade;
   animation-duration: 1300ms;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.5;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.5;
-  }
-  to {
-    opacity: 1;
-  }
 }
