@@ -1,3 +1,5 @@
+@import "../variables";
+
 .la-nav__sidebar {
   position: absolute;
   left: 100vw;
@@ -5,7 +7,7 @@
   bottom: 0;
   z-index: 5;
   width: 250px;
-  background-color: rgb(29, 29, 29);
+  background-color: $x-dark-grey;
   overflow-x: hidden;
   padding-top: 90px;
   transition: 600ms $easeOutCirc;
@@ -30,7 +32,7 @@
     line-height: 1;
     display: block;
     padding: 8px 8px 8px 32px;
-    color: #818181;
+    color: $med-grey;
 
     @media only screen and (min-width: 320px) and (max-width: 480px) {
       font-size: 13px;
@@ -50,7 +52,7 @@
     }
 
     &:hover {
-      color: #ebebeb;
+      color: $light-grey;
       cursor: pointer;
     }
 

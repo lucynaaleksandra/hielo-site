@@ -63,12 +63,12 @@ li {
     }
 
     a:first-child {
-      color: rgb(255, 255, 255);
+      color: $white;
       padding: 20px;
       opacity: 0.9;
 
       span {
-        color: rgba(255, 255, 255, 0.5);
+        color: $color-shadow-light;
       }
       &:hover {
         opacity: 1;
@@ -81,7 +81,7 @@ li {
     a:last-child {
       padding: 20px;
       width: 75px;
-      color: rgb(255, 255, 255);
+      color: $white;
       opacity: 0.9;
       transition: width 600ms;
 
@@ -99,6 +99,7 @@ li {
   }
 
   .la-nav__cover {
+    @extend %centered;
     position: absolute;
     top: 0;
     right: 0;
@@ -107,8 +108,7 @@ li {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
-    color: rgb(255, 255, 255);
+    color: $white;
     font-size: 17px;
     z-index: 3;
 
@@ -146,7 +146,7 @@ li {
     }
 
     hr {
-      border: 0.5px solid rgba(255, 255, 255, 0.5);
+      border: 0.5px solid $color-shadow-light;
       width: 25%;
     }
 
@@ -171,7 +171,7 @@ li {
 
 /* ------------- DUAL COLUMN ------------- */
 .la-dualcolumns {
-  background-color: rgb(242, 242, 242);
+  background-color: $x-light-grey;
   width: 100%;
   box-sizing: border-box;
 
@@ -179,7 +179,7 @@ li {
   grid-template-columns: 1fr 1fr;
   grid-gap: 50px;
   padding: 90px;
-  color: rgb(63, 63, 63);
+  color: $dark-grey;
 
   @media only screen and (min-width: 320px) and (max-width: 480px) {
     grid-template-columns: 1fr;
@@ -192,19 +192,19 @@ li {
   }
 
   > .la-dualcolumn {
-    text-align: center;
+    @extend %centered;
     display: flex;
     flex-direction: column;
 
     &:nth-child(1),
     &:nth-child(2) {
-      background-color: rgb(255, 255, 255);
+      background-color: $white;
     }
 
     .la-dualcolumn__img {
       overflow: hidden;
       cursor: pointer;
-      background-color: #000000;
+      background-color: $black;
 
       &:before {
         content: "";
@@ -248,7 +248,7 @@ li {
         p {
           text-transform: uppercase;
           font-size: 12px;
-          color: rgb(174, 174, 174);
+          color: $light-med-grey;
           letter-spacing: 3px;
           word-spacing: 1px;
 
@@ -261,7 +261,7 @@ li {
         }
 
         hr {
-          border: 0.5px solid rgba(153, 152, 152, 0.5);
+          border: 0.5px solid $color-shadow-med;
           width: 50%;
         }
         h2 {
@@ -272,7 +272,7 @@ li {
 
       > p {
         font-size: 14px;
-        color: #aeaeae;
+        color: $light-med-grey;
         padding-bottom: 30px;
 
         @media only screen and (min-width: 320px) and (max-width: 480px) {
@@ -285,20 +285,20 @@ li {
 
       button {
         padding: 15px;
-        background-color: rgb(255, 255, 255);
+        background-color: $white;
         font-size: 16px;
         text-transform: uppercase;
-        border: 2px solid rgb(211, 211, 211);
+        border: 2px solid $light-grey;
         border-radius: 3px;
         outline: none;
         margin-top: auto;
         align-self: center;
         a {
-          color: rgb(174, 174, 174);
+          color: $light-med-grey;
         }
         &:hover {
           cursor: pointer;
-          background-color: rgb(228, 228, 228);
+          background-color: $light-grey;
           transition: 800ms;
         }
 
@@ -317,10 +317,7 @@ li {
 
 /* ------------- BANNER ------------- */
 .la-banner__wrapper {
-  background-image: linear-gradient(
-      rgba(12, 12, 12, 0.6),
-      rgba(12, 12, 12, 0.6)
-    ),
+  background-image: linear-gradient($color-shadow-black, $color-shadow-black),
     url("/asset/siesta-1.jpg");
   background-size: cover;
   background-position: center;
@@ -328,11 +325,11 @@ li {
   min-height: 20vh;
 
   .la-banner__headings {
+    @extend %centered;
     display: block;
     position: relative;
     padding: 100px 0;
-    text-align: center;
-    color: rgb(255, 255, 255);
+    color: $white;
     font-size: 17px;
 
     p {
@@ -348,7 +345,7 @@ li {
       }
     }
     hr {
-      border: 0.5px solid rgba(255, 255, 255, 0.5);
+      border: 0.5px solid $color-shadow-light;
       width: 25%;
     }
     h2 {
@@ -372,8 +369,8 @@ li {
 }
 
 .la-fourgrid__content {
-  background-color: rgb(242, 242, 242);
-  text-align: center;
+  @extend %centered;
+  background-color: $x-light-grey;
   padding-top: 40px;
 
   > div {
@@ -412,7 +409,6 @@ li {
     grid-template-rows: 1fr 1fr;
     grid-gap: 50px;
     padding: 50px 130px 150px 130px;
-    background-color: rgb(242, 242, 242);
 
     @media only screen and (min-width: 320px) and (max-width: 480px) {
       grid-template-columns: 1fr;
@@ -426,7 +422,7 @@ li {
     }
 
     a {
-      border: 15px solid rgb(255, 255, 255);
+      border: 15px solid $white;
       overflow: hidden;
 
       @media only screen and (min-width: 320px) and (max-width: 480px) {
@@ -457,12 +453,12 @@ li {
 
 /* ------------- FOOTER ------------- */
 footer {
+  @extend %centered;
   display: block;
   font-size: 13px;
-  text-align: center;
   padding-bottom: 40px;
-  color: rgba(255, 249, 241, 0.7);
-  background-color: rgb(24, 24, 23);
+  color: rgba($x-light-grey, 0.8);
+  background-color: $x-dark-grey;
   overflow: hidden;
 
   @media only screen and (min-width: 320px) and (max-width: 480px) {
@@ -478,8 +474,8 @@ footer {
   }
 
   ul li {
+    @extend %centered;
     display: inline-block;
-    text-align: center;
     padding: 40px 15px 0 15px;
 
     a {
@@ -492,7 +488,7 @@ footer {
       }
 
       i {
-        color: rgba(255, 249, 241, 0.7);
+        color: rgba($x-light-grey, 0.8);
         font-size: 25px;
 
         @media only screen and (min-width: 320px) and (max-width: 480px) {

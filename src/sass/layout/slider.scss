@@ -6,7 +6,7 @@
   bottom: 0;
   z-index: 0;
   padding: 280px 0;
-  color: rgb(255, 255, 255);
+  color: $white;
   background-size: cover;
   background-position: center;
   transition: all 1000ms ease-out;
@@ -29,7 +29,7 @@
     width: 15px;
     border-radius: 50%;
     outline: none;
-    background-color: rgba(187, 187, 187, 0.5);
+    background-color: $color-shadow-med;
     cursor: pointer;
     transition: background-color 600ms ease;
 
@@ -49,29 +49,20 @@
 
   > input:hover,
   .active {
-    background-color: rgb(241, 241, 241);
+    background-color: $light-grey;
   }
 }
 
 .la-nav__slide-1 {
-  background-image: linear-gradient(
-      rgba(12, 12, 12, 0.7),
-      rgba(12, 12, 12, 0.7)
-    ),
+  background-image: linear-gradient($color-shadow-black, $color-shadow-black),
     url("/asset/siesta-2.jpg");
 }
 .la-nav__slide-2 {
-  background-image: linear-gradient(
-      rgba(12, 12, 12, 0.7),
-      rgba(12, 12, 12, 0.7)
-    ),
+  background-image: linear-gradient($color-shadow-black, $color-shadow-black),
     url("/asset/siesta-3.jpg");
 }
 .la-nav__slide-3 {
-  background-image: linear-gradient(
-      rgba(12, 12, 12, 0.7),
-      rgba(12, 12, 12, 0.7)
-    ),
+  background-image: linear-gradient($color-shadow-black, $color-shadow-black),
     url("/asset/siesta-4.jpg");
 }
 
