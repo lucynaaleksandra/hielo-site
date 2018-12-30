@@ -45,6 +45,31 @@ function showSlides(n) {
   dots[slideIndex - 1].className += " active";
 }
 
+// LAZY LOADING SECTIONS
+document.addEventListener("DOMContentLoaded", function() {
+  var sections = [].slice.call(document.querySelectorAll("main > section"));
+
+  if ("IntersectionObserver" in window) {
+    let sectionObserver = new IntersectionObserver(
+      function(entries, observer) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("section--visible");
+            sectionObserver.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        rootMargin: "0px 0px -500px 0px"
+      }
+    );
+
+    sections.forEach(function(section) {
+      sectionObserver.observe(section);
+    });
+  }
+});
+
 // STICKY NAV
 // window.onscroll = function() {
 //   myFunction();

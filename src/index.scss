@@ -170,6 +170,23 @@ li {
   padding: 90px;
   color: $dark-grey;
 
+  > .la-dualcolumn {
+    transition: 1000ms;
+    opacity: 0;
+    transform: translateY(50px);
+
+    &:nth-child(2) {
+      transition-delay: 200ms;
+    }
+  }
+
+  &.section--visible {
+    > .la-dualcolumn {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   @media only screen and (min-width: $break-xs) and (max-width: $break-sm) {
     grid-template-columns: 1fr;
     grid-gap: 10px;
@@ -379,6 +396,35 @@ li {
 .la-fourgrid {
   width: 100%;
   box-sizing: border-box;
+
+  .la-fourgrid__gallery {
+    > a {
+      transition: 1000ms $easeOutCirc;
+      opacity: 0;
+      transform: scale(0.7);
+
+      &:nth-child(2) {
+        transition-delay: 250ms;
+      }
+
+      &:nth-child(3) {
+        transition-delay: 500ms;
+      }
+
+      &:nth-child(4) {
+        transition-delay: 750ms;
+      }
+    }
+  }
+
+  &.section--visible {
+    .la-fourgrid__gallery {
+      > a {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
 }
 
 .la-fourgrid__content {
