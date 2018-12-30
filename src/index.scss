@@ -397,26 +397,6 @@ li {
   width: 100%;
   box-sizing: border-box;
 
-  .la-fourgrid__gallery {
-    > a {
-      transition: 1000ms $easeOutCirc;
-      opacity: 0;
-      transform: scale(0.7);
-
-      &:nth-child(2) {
-        transition-delay: 250ms;
-      }
-
-      &:nth-child(3) {
-        transition-delay: 500ms;
-      }
-
-      &:nth-child(4) {
-        transition-delay: 750ms;
-      }
-    }
-  }
-
   &.section--visible {
     .la-fourgrid__gallery {
       > a {
@@ -502,6 +482,22 @@ li {
     a {
       border: 20px solid $white;
       overflow: hidden;
+
+      transition: 1000ms $easeOutCirc;
+      opacity: 0;
+      transform: scale(0.7);
+
+      &:nth-child(2) {
+        transition-delay: 250ms;
+      }
+
+      &:nth-child(3) {
+        transition-delay: 500ms;
+      }
+
+      &:nth-child() {
+        transition-delay: 750ms;
+      }
 
       @media only screen and (min-width: $break-xs) and (max-width: $break-sm) {
         border-width: 12px;
