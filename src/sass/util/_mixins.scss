@@ -1,5 +1,3 @@
-/* ----- MEDIA QUERIES ----- */
-
 @mixin keyframes($animationName) {
   @-webkit-keyframes #{$animationName} {
     @content;
@@ -15,7 +13,7 @@
   }
 }
 
-@mixin create-fade-up-keyframes($animationName, $opacity: 1) {
+@mixin create-fade-up-keyframes($animationName, $opacity: 0.8) {
   @keyframes #{$animationName} {
     from {
       opacity: 0;
@@ -59,4 +57,4 @@
   }
 }
 
-@include create-fade-up-keyframes("enter-fade-up-1", 0.6);
+@include create-fade-up-keyframes("enter-fade-up-1", 0.8);

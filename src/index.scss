@@ -348,10 +348,8 @@ li {
   min-height: 20vh;
 
   &.section--visible {
-    .la-banner__headings {
-      h2 {
-        opacity: 1;
-      }
+    .la-banner__headings p {
+      opacity: 0.6;
     }
   }
 
@@ -367,10 +365,10 @@ li {
       margin-bottom: 15px;
       text-transform: uppercase;
       letter-spacing: 4px;
-      font-size: 12px;
+      font-size: 11px;
       opacity: 0.6;
-      transform: scaleX(0);
-      animation: enter-scale-x 1700ms $easeOutCirc 500ms normal forwards;
+      transform: scaleY(0.8);
+      transition: 700ms ease-in-out;
 
       @media only screen and (min-width: $break-xs) and (max-width: $break-sm) {
         font-size: 8px;
@@ -393,8 +391,7 @@ li {
       letter-spacing: 2px;
       word-spacing: 3px;
       margin: 0;
-      opacity: 0;
-      animation: enter-fade-up-1 2000ms $easeOutBack 300ms normal forwards;
+      opacity: 1;
 
       @media only screen and (min-width: $break-xs) and (max-width: $break-sm) {
         font-size: 20px;

@@ -13,7 +13,7 @@ window.closeNav = () => {
     .classList.remove("la-nav__sidebar--visible");
 };
 
-// SLIDESHOW
+// SLIDER
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -27,10 +27,6 @@ function showSlides(n) {
 
   if (n > slides.length) {
     slideIndex = 1;
-  }
-
-  if (n < 1) {
-    slideIndex = slides.length;
   }
 
   for (let i = 0; i < slides.length; i++) {
@@ -60,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
       },
       {
-        rootMargin: "0px 0px -500px 0px"
+        rootMargin: "0px 0px -400px 0px"
       }
     );
 
