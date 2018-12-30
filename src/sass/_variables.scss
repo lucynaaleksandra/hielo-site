@@ -13,16 +13,12 @@ $color-shadow-light: rgba($white, 0.5);
 $color-shadow-med: rgba($light-med-grey, 0.5);
 $color-shadow-black: rgba($black, 0.6);
 
-// Media query breakpoints
-$break-narrow: "(max-width: 768px)";
-$break-wide: "(max-width: 1024px)";
-
 // Breakpoints
-$breakpoint-xs: 1px;
-$breakpoint-sm: 480px;
-$breakpoint-md: 768px;
-$breakpoint-lg: 1100px;
-$breakpoint-xl: 1800px;
+$break-xs: 320px;
+$break-sm: 480px;
+$break-md: 768px;
+$break-lg: 1040px;
+$break-xl: 1824px;
 
 // Transitions
 $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);

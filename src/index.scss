@@ -49,16 +49,13 @@ li {
     z-index: 5;
     display: flex;
     justify-content: space-between;
-    font-size: 19px;
+    font-size: 16px;
 
-    @include mq(x-small) {
+    @media only screen and (min-width: $break-xs) and (max-width: $break-sm) {
       font-size: 13px;
     }
-    @include mq(small) {
-      font-size: 14px;
-    }
-    @include mq(medium) {
-      font-size: 17px;
+    @media only screen and (min-width: $break-sm) and (max-width: $break-md) {
+      font-size: 15px;
     }
 
     a:first-child {
@@ -108,7 +105,7 @@ li {
     z-index: 3;
 
     p {
-      margin-bottom: 0;
+      margin-bottom: 20px;
       text-transform: uppercase;
       word-spacing: 2px;
       letter-spacing: 5px;
@@ -117,15 +114,15 @@ li {
       opacity: 0;
       animation: enter-fade-up-1 2000ms $easeOutCirc 800ms normal forwards;
 
-      @include mq(x-small) {
+      @media only screen and (min-width: $break-xs) and (max-width: $break-sm) {
         font-size: 11px;
-        padding: 30px;
+        padding: 0 25px;
       }
-      @include mq(small) {
+      @media only screen and (min-width: $break-sm) and (max-width: $break-md) {
         font-size: 13px;
-        padding: 20px 50px;
+        padding: 0 50px;
       }
-      @include mq(large) {
+      @media only screen and (min-width: $break-lg) {
         font-size: 18px;
         font-weight: 200;
       }
@@ -148,16 +145,13 @@ li {
 
       animation: enter-fade-down 2000ms $easeOutCirc 800ms normal forwards;
 
-      @include mq(x-small) {
+      @media only screen and (min-width: $break-xs) and (max-width: $break-sm) {
         font-size: 70px;
       }
-      @include mq(small) {
-        font-size: 75px;
+      @media only screen and (min-width: $break-sm) and (max-width: $break-md) {
+        font-size: 80px;
       }
-      @include mq(medium) {
-        font-size: 85px;
-      }
-      @include mq(large) {
+      @media only screen and (min-width: $break-xl) {
         font-size: 110px;
       }
     }
@@ -176,24 +170,23 @@ li {
   padding: 90px;
   color: $dark-grey;
 
-  @include mq(x-small) {
+  @media only screen and (min-width: $break-xs) and (max-width: $break-sm) {
     grid-template-columns: 1fr;
     grid-gap: 10px;
     padding: 30px 18px;
   }
-  @include mq(small) {
+  @media only screen and (min-width: $break-sm) and (max-width: $break-md) {
     grid-template-columns: 1fr;
-    grid-gap: 10px;
-    padding: 30px 18px;
+    grid-gap: 30px;
+    padding: 80px 40px;
   }
-  @include mq(medium) {
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 35px;
-    padding: 30px 18px;
+  @media only screen and (min-width: $break-md) {
+    grid-gap: 40px;
+    padding: 100px 60px;
   }
-  @include mq(large) {
+  @media only screen and (min-width: $break-xl) {
     grid-gap: 50px;
-    padding: 90px;
+    padding: 120px 100px;
   }
 
   > .la-dualcolumn {
@@ -252,15 +245,15 @@ li {
       > div {
         p {
           text-transform: uppercase;
-          font-size: 12px;
+          font-size: 11px;
           color: $light-med-grey;
           letter-spacing: 3px;
           word-spacing: 1px;
 
-          @include mq(x-small) {
+          @media only screen and (min-width: $break-xs) and (max-width: $break-sm) {
             font-size: 9px;
           }
-          @include mq(small) {
+          @media only screen and (min-width: $break-sm) and (max-width: $break-md) {
             font-size: 11px;
           }
         }
@@ -280,14 +273,14 @@ li {
         color: $light-med-grey;
         padding-bottom: 30px;
 
-        @include mq(x-small) {
+        @media only screen and (min-width: $break-xs) and (max-width: $break-sm) {
           font-size: 11px;
         }
-        @include mq(small) {
+        @media only screen and (min-width: $break-sm) and (max-width: $break-md) {
           font-size: 12px;
         }
-        @include mq(medium) {
-          font-size: 14px;
+        @media only screen and (min-width: $break-md) {
+          font-size: 13px;
         }
       }
 
@@ -301,22 +294,28 @@ li {
         outline: none;
         margin-top: auto;
         align-self: center;
+
         a {
           color: $light-med-grey;
         }
+
         &:hover {
           cursor: pointer;
           background-color: $light-grey;
           transition: 800ms;
         }
 
-        @include mq(x-small) {
+        @media only screen and (min-width: $break-sm) and (max-width: $break-sm) {
           font-size: 12px;
           padding: 6px;
         }
-        @include mq(small) {
-          font-size: 14px;
+        @media only screen and (min-width: $break-sm) and (max-width: $break-md) {
+          font-size: 13px;
           padding: 7px;
+        }
+        @media only screen and (min-width: $break-md) {
+          font-size: 15px;
+          padding: 10px;
         }
       }
     }
@@ -347,17 +346,13 @@ li {
       font-size: 12px;
       opacity: 0.6;
 
-      @include mq(x-small) {
+      @media only screen and (min-width: $break-xs) and (max-width: $break-sm) {
         font-size: 8px;
         padding: 20px;
       }
-      @include mq(small) {
+      @media only screen and (min-width: $break-sm) and (max-width: $break-md) {
         font-size: 10px;
-        padding: 0 40px;
-      }
-      @include mq(medium) {
-        font-size: 13px;
-        font-weight: 200;
+        padding: 0 30px;
       }
     }
 
@@ -373,14 +368,8 @@ li {
       word-spacing: 3px;
       margin: 0;
 
-      @include mq(x-small) {
-        font-size: 18px;
-      }
-      @include mq(small) {
+      @media only screen and (min-width: $break-xs) and (max-width: $break-sm) {
         font-size: 20px;
-      }
-      @include mq(large) {
-        font-size: 24px;
       }
     }
   }
@@ -405,16 +394,13 @@ li {
       font-size: 10px;
       opacity: 0.6;
 
-      @include mq(x-small) {
+      @media only screen and (min-width: $break-xs) and (max-width: $break-sm) {
         font-size: 8px;
-        padding: 12px;
+        padding: 10px;
       }
-      @include mq(small) {
-        font-size: 9px;
-        padding: 0 15px;
-      }
-      @include mq(medium) {
+      @media only screen and (min-width: $break-sm) and (max-width: $break-md) {
         font-size: 10px;
+        padding: 0 50px;
       }
     }
 
@@ -424,20 +410,20 @@ li {
     }
 
     h2 {
-      // font-size: 34px;
+      font-size: 32px;
       font-weight: 300;
       letter-spacing: 2px;
       word-spacing: 3px;
       margin: 0;
 
-      @include mq(x-small) {
-        font-size: 22px;
+      @media only screen and (min-width: $break-xs) and (max-width: $break-sm) {
+        font-size: 20px;
       }
-      @include mq(small) {
-        font-size: 24px;
+      @media only screen and (min-width: $break-sm) and (max-width: $break-md) {
+        font-size: 23px;
       }
-      @include mq(medium) {
-        font-size: 28px;
+      @media only screen and (min-width: $break-md) and (max-width: $break-lg) {
+        font-size: 27px;
       }
     }
   }
@@ -449,21 +435,21 @@ li {
     grid-gap: 50px;
     padding: 50px 130px 150px 130px;
 
-    @include mq(x-small) {
+    @media only screen and (min-width: $break-xs) and (max-width: $break-sm) {
       grid-template-columns: 1fr;
       padding: 30px 20px 40px 20px;
       grid-gap: 12px;
     }
-    @include mq(small) {
+    @media only screen and (min-width: $break-sm) and (max-width: $break-md) {
       padding: 20px 30px 30px 30px;
       grid-gap: 15px;
     }
-    @include mq(medium) {
-      padding: 20px 50px 50px 50px;
+    @media only screen and (min-width: $break-md) and (max-width: $break-lg) {
+      padding: 40px 100px 60px 100px;
       grid-gap: 25px;
     }
-    @include mq(large) {
-      padding: 50px 100px 100px 100px;
+    @media only screen and (min-width: $break-lg) {
+      padding: 40px 100px 60px 100px;
       grid-gap: 40px;
     }
 
@@ -471,14 +457,12 @@ li {
       border: 20px solid $white;
       overflow: hidden;
 
-      @include mq(x-small) {
+      @media only screen and (min-width: $break-xs) and (max-width: $break-sm) {
         border-width: 12px;
       }
-      @include mq(small) {
-        border-width: 14px;
-      }
-      @include mq(medium) {
-        border-width: 20px;
+
+      @media only screen and (min-width: $break-sm) and (max-width: $break-md) {
+        border-width: 12px;
       }
 
       img {
@@ -509,11 +493,11 @@ footer {
   background-color: $x-dark-grey;
   overflow: hidden;
 
-  @include mq(x-small) {
+  @media only screen and (min-width: $break-xs) and (max-width: $break-sm) {
     font-size: 10px;
   }
-  @include mq(small) {
-    font-size: 11px;
+  @media only screen and (min-width: $break-sm) and (max-width: $break-md) {
+    font-size: 12px;
     padding-bottom: 30px;
   }
 
@@ -540,14 +524,11 @@ footer {
         font-size: 25px;
         padding-bottom: 10px;
 
-        @include mq(x-small) {
+        @media only screen and (min-width: $break-xs) and (max-width: $break-sm) {
           font-size: 20px;
         }
-        @include mq(small) {
+        @media only screen and (min-width: $break-sm) and (max-width: $break-md) {
           font-size: 22px;
-        }
-        @include mq(medium) {
-          font-size: 25px;
         }
       }
     }

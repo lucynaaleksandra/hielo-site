@@ -32,17 +32,13 @@
     cursor: pointer;
     transition: background-color 600ms ease;
 
-    @include mq(x-small) {
+    @media only screen and (min-width: $break-xs) and (max-width: $break-sm) {
       height: 12px;
       width: 12px;
     }
-    @include mq(small) {
+    @media only screen and (min-width: $break-sm) and (max-width: $break-md) {
       height: 14px;
       width: 14px;
-    }
-    @include mq(medium) {
-      height: 16px;
-      width: 16px;
     }
   }
 

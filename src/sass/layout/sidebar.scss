@@ -14,19 +14,14 @@
   transform: scale(1.4);
   transform-origin: 0 50%;
 
-  @include mq(x-small) {
+  @media only screen and (min-width: $break-xs) and (max-width: $break-sm) {
     width: 160px;
     bottom: 0;
     padding-top: 50px;
     transform: scale(1.2);
   }
-  @include mq(small) {
+  @media only screen and (min-width: $break-sm) and (max-width: $break-md) {
     width: 180px;
-    padding-top: 80px;
-    transform: scale(1.2);
-  }
-  @include mq(medium) {
-    width: 250px;
     padding-top: 80px;
     transform: scale(1.2);
   }
@@ -40,19 +35,15 @@
     padding: 8px 8px 8px 32px;
     color: $med-grey;
 
-    @include mq(x-small) {
+    @media only screen and (min-width: $break-xs) and (max-width: $break-sm) {
       font-size: 13px;
       line-height: 0.5;
       padding: 5px 5px 5px 25px;
     }
-    @include mq(small) {
+    @media only screen and (min-width: $break-sm) and (max-width: $break-md) {
       font-size: 15px;
       line-height: 0.8;
       padding: 7px 7px 7px 30px;
-    }
-    @include mq(medium) {
-      font-size: 18px;
-      padding: 8px 8px 8px 32px;
     }
 
     & ~ hr {
@@ -73,14 +64,11 @@
       font-size: 30px;
       cursor: pointer;
 
-      @include mq(x-small) {
+      @media only screen and (min-width: $break-xs) and (max-width: $break-sm) {
         font-size: 25px;
       }
-      @include mq(small) {
+      @media only screen and (min-width: $break-sm) and (max-width: $break-md) {
         font-size: 23px;
-      }
-      @include mq(medium) {
-        font-size: 28px;
       }
     }
   }
@@ -88,14 +76,11 @@
   &.la-nav__sidebar--visible {
     transform: translateX(-250px) scale(1);
 
-    @include mq(x-small) {
+    @media only screen and (min-width: $break-xs) and (max-width: $break-sm) {
       transform: translateX(-160px) scale(1);
     }
-    @include mq(small) {
+    @media only screen and (min-width: $break-sm) and (max-width: $break-md) {
       transform: translateX(-190px) scale(1);
-    }
-    @include mq(medium) {
-      transform: translateX(-250px) scale(1);
     }
   }
 }

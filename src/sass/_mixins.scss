@@ -1,31 +1,5 @@
 /* ----- MEDIA QUERIES ----- */
 
-@mixin mq($break) {
-  @if $break == "x-small" {
-    @media (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm) {
-      @content;
-    }
-  } @else if $break == "small" {
-    @media (min-width: $breakpoint-sm + 1) {
-      @content;
-    }
-  } @else if $break == "medium" {
-    @media (min-width: $breakpoint-md) {
-      @content;
-    }
-  } @else if $break == "large" {
-    @media (min-width: $breakpoint-lg) {
-      @content;
-    }
-  } @else if $break == "x-large" {
-    @media (min-width: $breakpoint-xl) {
-      @content;
-    }
-  } @else {
-    @error "Woops! No value could be retrieved for `#{$break}`.";
-  }
-}
-
 @mixin keyframes($animationName) {
   @-webkit-keyframes #{$animationName} {
     @content;
