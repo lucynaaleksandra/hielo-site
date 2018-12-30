@@ -45,7 +45,7 @@ function showSlides(n) {
   dots[slideIndex - 1].className += " active";
 }
 
-// LAZY LOADING SECTIONS
+// LAZY LOADING
 document.addEventListener("DOMContentLoaded", function() {
   var sections = [].slice.call(document.querySelectorAll("main > section"));
 
