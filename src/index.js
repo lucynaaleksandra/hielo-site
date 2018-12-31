@@ -65,36 +65,3 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 });
-
-// STICKY NAV
-// window.onscroll = function() {
-//   myFunction();
-// };
-
-// var navbar = document.querySelector("#la-nav__navbar");
-// var sticky = navbar.offsetTop;
-
-// function myFunction() {
-//   if (window.pageYOffset >= sticky) {
-//     navbar.classList.add("sticky");
-//   } else {
-//     navbar.classList.remove("sticky");
-//   }
-//   console.log("sticky:: ", sticky);
-// }
-
-// $(document).ready(function() {
-//   // STICKY NAVIGATION
-//   $(".la-dualcolumn--sticky").waypoint(
-//     function(direction) {
-//       if (direction === "down") {
-//         $("#la-nav__navbar").addClass("sticky");
-//       } else {
-//         $("#la-nav__navbar").removeClass("sticky");
-//       }
-//     },
-//     {
-//       offset: "60px;"
-//     }
-//   );
-// });
