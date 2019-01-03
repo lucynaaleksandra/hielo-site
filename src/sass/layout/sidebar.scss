@@ -1,5 +1,5 @@
 .la-nav__sidebar {
-  position: absolute;
+  position: fixed;
   left: 100vw;
   top: 0;
   bottom: 0;
@@ -32,6 +32,7 @@
     display: block;
     padding: 8px 8px 8px 32px;
     color: $med-grey;
+    user-select: none;
 
     @media only screen and (min-width: $break-xs) and (max-width: $break-sm) {
       font-size: 13px;

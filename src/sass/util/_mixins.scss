@@ -13,6 +13,18 @@
   }
 }
 
+@mixin hover-scale-01 {
+  cursor: pointer;
+  opacity: 0.9;
+  transform: scale(1);
+  transition: $easeOutBack 250ms;
+
+  &:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
 @mixin create-fade-up-keyframes($animationName, $opacity: 0.8) {
   @keyframes #{$animationName} {
     from {

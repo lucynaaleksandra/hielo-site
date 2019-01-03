@@ -61,15 +61,11 @@ li {
     a:first-child {
       color: $white;
       padding: 20px;
-      opacity: 0.9;
+      user-select: none;
+      @include hover-scale-01;
 
       span {
         color: $color-shadow-light;
-      }
-      &:hover {
-        opacity: 1;
-        transition: 500ms ease-out;
-        transform: scale(1.02);
       }
     }
 
@@ -78,15 +74,8 @@ li {
       padding: 20px;
       width: 75px;
       color: $white;
-      opacity: 0.9;
-      transition: width 600ms;
-
-      &:hover {
-        cursor: pointer;
-        opacity: 1;
-        transition: 500ms ease-out;
-        transform: scale(1.03);
-      }
+      user-select: none;
+      @include hover-scale-01;
     }
   }
 
@@ -110,7 +99,6 @@ li {
       word-spacing: 2px;
       letter-spacing: 5px;
       font-size: 15px;
-
       opacity: 0;
       animation: enter-fade-up-1 2000ms $easeOutCirc 800ms normal forwards;
 
@@ -310,6 +298,7 @@ li {
         outline: none;
         margin-top: auto;
         align-self: center;
+        user-select: none;
 
         a {
           color: $light-med-grey;
@@ -541,6 +530,7 @@ footer {
   color: rgba($x-light-grey, 0.8);
   background-color: $x-dark-grey;
   overflow: hidden;
+  user-select: none;
 
   @media only screen and (min-width: $break-xs) and (max-width: $break-sm) {
     font-size: 10px;
@@ -558,6 +548,7 @@ footer {
     display: inline-block;
     padding: 40px 15px 0 15px;
     text-align: center;
+    user-select: none;
 
     a {
       display: block;
