@@ -79,6 +79,11 @@ li {
     }
   }
 
+  #la-nav__navbar {
+    background-color: $white;
+    // color: rgba(255, 255, 255, .7);
+  }
+
   .la-nav__cover {
     position: absolute;
     top: 0;
@@ -129,7 +134,6 @@ li {
       letter-spacing: 8px;
       margin: 0;
       opacity: 0;
-
       animation: enter-fade-down 2000ms $easeOutCirc 800ms normal forwards;
 
       @media only screen and (min-width: $break-xs) and (max-width: $break-sm) {

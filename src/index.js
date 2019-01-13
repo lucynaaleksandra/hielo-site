@@ -1,4 +1,9 @@
 import "./index.scss";
+import $ from "jquery";
+import sticky from "jquery-sticky";
+
+if (sticky) {
+}
 
 // SIDEBAR
 window.openNav = () => {
@@ -65,3 +70,24 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 });
+
+// STICKY NAV
+$(document).ready(function() {
+  $("#la-nav__navbar").sticky({
+    topSpacing: 0,
+    zIndex: 15,
+    backgroundColor: "rgba(255, 255, 255, .3)"
+  });
+
+  $("#la-nav__navbar").on("sticky-start", function() {
+    $("#la-nav__navbar").css({ backgroundColor: "rgba(255, 255, 255, .3)" });
+  });
+  $("#la-fourgrid__section").on("sticky-end", function() {
+    $("#about_section").css({ backgroundColor: "rgba(255, 255, 255, .7)" });
+  });
+});
+
+// console.log(window);
+// $(document).ready(() => {
+//   console.log("hello");
+// });
