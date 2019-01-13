@@ -40,6 +40,21 @@ li {
   max-width: 100%;
   height: 100vh;
   position: relative;
+  $padding: 20px;
+
+  .sticky-wrapper {
+    &.is-sticky {
+      header {
+        &:before {
+          opacity: 1;
+        }
+
+        a {
+          padding: 7px $padding;
+        }
+      }
+    }
+  }
 
   header {
     position: absolute;
@@ -51,6 +66,22 @@ li {
     justify-content: space-between;
     font-size: 16px;
 
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      transition: 1500ms $easeOutCirc;
+      opacity: 0;
+      background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.7577216569767442) 0%,
+        rgba(0, 0, 0, 1) 100%
+      );
+    }
+
     @media only screen and (min-width: $break-xs) and (max-width: $break-sm) {
       font-size: 13px;
     }
@@ -58,12 +89,15 @@ li {
       font-size: 15px;
     }
 
-    a:first-child {
+    a {
+      padding: $padding;
       color: $white;
-      padding: 20px;
       user-select: none;
       @include hover-scale-01;
+      transition: padding 500ms $easeOutCirc;
+    }
 
+    a:first-child {
       span {
         color: $color-shadow-light;
       }
@@ -71,16 +105,12 @@ li {
 
     // menu
     a:last-child {
-      padding: 20px;
       width: 75px;
-      color: $white;
-      user-select: none;
-      @include hover-scale-01;
     }
   }
 
   #la-nav__navbar {
-    background-color: $white;
+    //background-color: $white;
     // color: rgba(255, 255, 255, .7);
   }
 

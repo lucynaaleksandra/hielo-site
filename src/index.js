@@ -75,17 +75,21 @@ document.addEventListener("DOMContentLoaded", function() {
 $(document).ready(function() {
   $("#la-nav__navbar").sticky({
     topSpacing: 0,
-    zIndex: 15,
-    backgroundColor: "rgba(255, 255, 255, .3)"
-  });
-
-  $("#la-nav__navbar").on("sticky-start", function() {
-    $("#la-nav__navbar").css({ backgroundColor: "rgba(255, 255, 255, .3)" });
-  });
-  $("#la-fourgrid__section").on("sticky-end", function() {
-    $("#about_section").css({ backgroundColor: "rgba(255, 255, 255, .7)" });
+    zIndex: 15
   });
 });
+
+// $("#la-nav__navbar").on("sticky-start", function() {
+//   $("#la-nav__navbar").css({
+//     backgroundColor: "rgba(255, 255, 255, .3)"
+//   });
+// });
+// $("#la-fourgrid__section").on("sticky-end", function() {
+//   $("#la-fourgrid__section").css({
+//     backgroundColor: "rgba(255, 255, 255, .7)",
+//     color: "black"
+//   });
+// });
 
 // console.log(window);
 // $(document).ready(() => {
